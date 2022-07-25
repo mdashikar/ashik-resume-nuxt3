@@ -34,9 +34,7 @@
                 >
                 <div
                   class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center"
-                >
-                  
-                </div>
+                ></div>
                 <div
                   class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0"
                 >
@@ -102,22 +100,23 @@
         <!-- Main Hero Content -->
 
         <!-- Section 1 -->
-        <section class="py-20 ">
-          <div
-            class="container items-center   mx-auto "
-          >
+        <section class="py-20">
+          <div class="container items-center mx-auto">
             <div class="flex flex-wrap items-center -mx-3">
               <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
                 <div class="w-full lg:max-w-md">
                   <h2
                     class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading"
                   >
-                    I am a Full Stack JavaScript Developer based in Sylhet, Bangladesh.
+                    I am a Full Stack JavaScript Developer based in Sylhet,
+                    Bangladesh.
                   </h2>
                   <p
                     class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6"
                   >
-                    I have a passion for web technologies and I am currently using my skills as Lead front end developer at Project Protocol creating apps.
+                    I have a passion for web technologies and I am currently
+                    using my skills as Lead front end developer at Project
+                    Protocol creating apps.
                   </p>
                   <ul>
                     <li class="flex items-center py-2 space-x-4 xl:py-3">
@@ -178,6 +177,38 @@
                       >
                     </li>
                   </ul>
+                  <div class="relative flex flex-col sm:flex-row sm:space-x-4">
+                    <a
+                      href="https://drive.google.com/file/d/1s7LXLwq0XAlZYVpkLsrIkb-eRuu803by/view"
+                      target="_blank"
+                      class="flex items-center w-full px-6 py-3 mb-3 text-md font-bold text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto"
+                      data-primary="indigo-600"
+                      data-rounded="rounded-md"
+                      data-primary-reset="{}"
+                    >
+                      Resume
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 ml-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                    <a
+                      href="mailto:md.ashik.ar@gmail.com"
+                      class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600"
+                      data-rounded="rounded-md"
+                    >
+                      Hire Me
+                    </a>
+                  </div>
                 </div>
               </div>
               <div
