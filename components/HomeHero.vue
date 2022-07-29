@@ -1,10 +1,7 @@
 <template>
   <div>
     <!-- Section 1 -->
-    <section
-      class="w-full px-6 pb-12 antialiased bg-white"
-      data-tails-scripts="//unpkg.com/alpinejs"
-    >
+    <section class="w-full px-6 pb-12 antialiased bg-white" id="home">
       <div class="mx-auto max-w-7xl">
         <nav
           class="relative z-50 h-24 select-none"
@@ -39,22 +36,22 @@
                   class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0"
                 >
                   <a
-                    href="#_"
+                    href="#home"
                     class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
                     >Home</a
                   >
                   <a
-                    href="#_"
+                    href="#about-me"
                     class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
                     >About me</a
                   >
                   <a
-                    href="#_"
+                    href="#works"
                     class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
                     >Works</a
                   >
                   <a
-                    href="#_"
+                    href="#contact"
                     class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-indigo-600 lg:mx-3 md:text-center"
                     >Contact</a
                   >
@@ -135,7 +132,7 @@
                         ></path>
                       </svg>
                       <span class="font-medium text-gray-500"
-                        >Faster Processing and Delivery</span
+                        >Brings ideas to life with web technologies</span
                       >
                     </li>
                     <li class="flex items-center py-2 space-x-4 xl:py-3">
@@ -154,7 +151,8 @@
                         ></path>
                       </svg>
                       <span class="font-medium text-gray-500"
-                        >Out of the Box Tracking and Monitoring</span
+                        >I  code beautifully simple things, and I love
+                        what I do.</span
                       >
                     </li>
                     <li class="flex items-center py-2 space-x-4 xl:py-3">
@@ -173,8 +171,8 @@
                         ></path>
                       </svg>
                       <span class="font-medium text-gray-500"
-                        >100% Protection and Security for Your App</span
-                      >
+                        >Product focused full-stack developer
+                      </span>
                     </li>
                   </ul>
                   <div class="relative flex flex-col sm:flex-row sm:space-x-4">
