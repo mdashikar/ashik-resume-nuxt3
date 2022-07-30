@@ -50,6 +50,7 @@
     </Head>
     <HomeHero />
     <AboutMe />
+    <MyWork />
     <Footer />
   </div>
 </template>

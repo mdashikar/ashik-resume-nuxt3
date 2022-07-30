@@ -65,7 +65,7 @@
             <p class="mt-0 text-center text-md font-medium text-gray-700">
               HTML, Pug, CSS, Sass, JavaScript, TypeScript, Git
             </p>
-            <p class="mt-3 text-md font-semibold text-indigo-500">Dev Tools:</p>
+            <p class="mt-3 text-md font-semibold text-indigo-500">Frameworks I use:</p>
             <p class="mt-0 text-center text-md font-medium text-gray-700">
               Tailwind <br />
               Bulma <br />
