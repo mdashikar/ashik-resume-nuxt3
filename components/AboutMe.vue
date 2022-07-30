@@ -63,7 +63,17 @@
               Languages I speak:
             </p>
             <p class="mt-0 text-center text-md font-medium text-gray-700">
-              HTML, Pug, CSS, Sass, VueJS, NuxtJS, ReactJS, NextJS
+              HTML, Pug, CSS, Sass, JavaScript, TypeScript, Git
+            </p>
+            <p class="mt-3 text-md font-semibold text-indigo-500">Dev Tools:</p>
+            <p class="mt-0 text-center text-md font-medium text-gray-700">
+              Tailwind <br />
+              Bulma <br />
+              Bootstrap <br />
+              Vue <br />
+              Nuxt <br />
+              React <br />
+              Next.js
             </p>
           </div>
 
@@ -98,7 +108,18 @@
               Languages I speak:
             </p>
             <p class="mt-0 text-center text-md font-medium text-gray-700">
-              JavaScript, NodeJs, ExpressJS, NoSql, MongoDB
+              JavaScript, TypeScript, NodeJs, ExpressJS, NoSql, MongoDB,
+              FireStore
+            </p>
+            <p class="mt-3 text-md font-semibold text-indigo-500">Dev Tools:</p>
+            <p class="mt-0 text-center text-md font-medium text-gray-700">
+              Mongoose <br />
+              RESTful API <br />
+              Postman <br />
+              Aws<br />
+              Linux<br />
+              VPS <br />
+              Docker <br />
             </p>
           </div>
 
@@ -136,6 +157,19 @@
             </p>
             <p class="mt-0 text-center text-md font-medium text-gray-700">
               Freelancing, Teamwork, Mentoring, Community
+            </p>
+            <p class="mt-3 text-md font-semibold text-indigo-500">
+              Mentoring Stats:
+            </p>
+            <p class="mt-0 text-center text-md font-medium text-gray-700">
+              4 years experience <br />
+              5+ short courses <br />
+              200+ students <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              
             </p>
           </div>
         </div>
