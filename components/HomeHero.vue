@@ -214,7 +214,7 @@
               >
                 <img
                   class="mx-auto sm:max-w-sm lg:max-w-full"
-                  src="https://cdn.devdojo.com/images/november2020/feature-graphic.png"
+                  src="/images/feature-graphic.png"
                   alt="feature image"
                 />
               </div>
