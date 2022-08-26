@@ -51,6 +51,8 @@
     <HomeHero />
     <AboutMe />
     <MyWork />
+    <Contact />
+    <Testimonial />
     <Footer />
   </div>
 </template>

@@ -21,7 +21,7 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 my-12 sm:my-16"
         >
           <div
-            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <svg
               class="w-16 h-auto"
@@ -38,7 +38,7 @@
             <p class="mt-2 text-sm text-gray-500">Electronic health record system</p>
           </div>
           <div
-            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <svg
               class="w-16 h-auto"
@@ -68,7 +68,7 @@
             <p class="mt-2 text-sm text-gray-500">Innovie Engine - worked on front-end</p>
           </div>
           <div
-            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <svg
               class="w-16 h-auto"
@@ -85,7 +85,7 @@
             <p class="mt-2 text-sm text-gray-500">Driver management system</p>
           </div>
           <div
-            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <svg
               class="w-16 h-auto"
@@ -102,7 +102,7 @@
             <p class="mt-2 text-sm text-gray-500">Next gen property sell rent app</p>
           </div>
           <div
-            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <svg
               class="w-16 h-auto"
@@ -131,7 +131,7 @@
             <p class="mt-2 text-sm text-gray-500">QR code based digital restaurant menu </p>
           </div>
           <div
-            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <svg
               class="w-16 h-auto"
@@ -160,7 +160,7 @@
             <p class="mt-2 text-sm text-gray-500">Multi-vendor eCommerce marketplace platform</p>
           </div>
           <div
-            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+            class="rounded-lg py-10 flex flex-col items-center justify-center shadow-lg border border-gray-100 transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <svg
               class="w-16 h-auto"

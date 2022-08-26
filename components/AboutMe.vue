@@ -30,7 +30,7 @@
           class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0"
         >
           <div
-            class="relative flex flex-col items-center text-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl"
+            class="relative flex flex-col items-center text-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <div class="p-3 text-white bg-indigo-500 rounded-full">
               <svg
@@ -78,7 +78,7 @@
           </div>
 
           <div
-            class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
+            class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <div class="p-3 text-white bg-indigo-500 rounded-full">
               <svg
@@ -124,7 +124,7 @@
           </div>
 
           <div
-            class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
+            class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl transform transition duration-500 hover:scale-110 cursor-pointer"
           >
             <div class="p-3 text-white bg-indigo-500 rounded-full">
               <svg
