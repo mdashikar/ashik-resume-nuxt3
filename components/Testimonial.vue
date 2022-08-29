@@ -50,36 +50,17 @@
             </div>
             <blockquote class="mt-8 text-lg text-gray-500">
               "Ashik is an amazing guy to work with. He posses diverse stunning
-              technological skills, but what amazed me most is his continuous
+              tech skills, but what amazed me most is his continuous
               strive to learn more. In vacancy announcement, we often see the
-              term anything can do attitude guy is required, in my opinion, he
-              is the perfect example of such a talent. "
+              term anything can do attitude guy is required, IMO, he
+              is the perfect example of such a talent. In the office, he is in
+              his best to be a great professional, while outside the office, you
+              might find him as a great friend."
             </blockquote>
           </div>
+
           <div
             class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200"
-          >
-            <div class="flex items-center justify-center">
-              <div
-                class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2547&amp;q=80"
-                  class="object-cover w-full h-full"
-                />
-              </div>
-              <div class="flex flex-col items-start justify-center">
-                <h4 class="font-bold text-gray-800">Jane Doe</h4>
-                <p class="text-gray-600">CTO of Business</p>
-              </div>
-            </div>
-            <blockquote class="mt-8 text-lg text-gray-500">
-              "Thanks for creating this service. My life is so much easier.
-              Thanks for making such a great product."
-            </blockquote>
-          </div>
-          <div
-            class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3"
           >
             <div class="flex items-center justify-center">
               <div
@@ -92,11 +73,41 @@
               </div>
               <div class="flex flex-col items-start justify-center">
                 <h4 class="font-bold text-gray-800">Jaidul Islam</h4>
-                <p class="text-gray-600">Senior Software Engineer at Vivasoft Limited</p>
+                <p class="text-gray-600">
+                  Senior Software Engineer at Vivasoft Limited
+                </p>
               </div>
             </div>
             <blockquote class="mt-8 text-lg text-gray-500">
-              "Very supportive and hard working. Helpful in team work. Passionate in working and improving skills."
+              "Very supportive and hard working. Helpful in team work.
+              Passionate in working and improving skills."
+            </blockquote>
+          </div>
+          <div
+            class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3"
+          >
+            <div class="flex items-center justify-center">
+              <div
+                class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
+              >
+                <img
+                  src="https://media-exp1.licdn.com/dms/image/C5603AQGVcgpdj6kcAA/profile-displayphoto-shrink_200_200/0/1649460933912?e=1667433600&v=beta&t=w3Wb5ntFgf4gdLdq-YGN5_mYmdv1RuQKbkxnIyB_fLI"
+                  class="object-cover w-full h-full"
+                />
+              </div>
+              <div class="flex flex-col items-start justify-center">
+                <h4 class="font-bold text-gray-800">Farid Chowdhury</h4>
+                <p class="text-gray-600">Backend engineer at Relantin</p>
+              </div>
+            </div>
+            <blockquote class="mt-8 text-lg text-gray-500">
+              "I've had the joy of working with Ashik, who is the Frontend Team
+              Lead, ensuring that our technologies and website were doing what
+              we needed them to do. He is wonderful at leading and teaching
+              other technical skills while being a supportive and caring
+              colleague. I'm glad to have worked closely with Ashik and
+              delighted that we are still co-work and collaborating with each
+              other."
             </blockquote>
           </div>
         </div>
