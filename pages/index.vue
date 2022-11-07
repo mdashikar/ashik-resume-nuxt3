@@ -26,11 +26,11 @@
 
       <Meta
         property="og:title"
-        content="Md. Ashiqur Rahman - Resume / CV / Personal Website / Portfolio"
+        content="Md. Ashiqur Rahman "
       />
       <Meta
         property="og:description"
-        content="Md. Ashiqur Rahman - Resume / CV / Personal Website / Portfolio"
+        content="Resume / CV / Personal Website / Portfolio"
       />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content="https://ashik.dev" />
