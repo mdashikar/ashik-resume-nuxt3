@@ -177,7 +177,7 @@
                   </ul>
                   <div class="relative flex flex-col sm:flex-row sm:space-x-4">
                     <a
-                      href="https://drive.google.com/file/d/148Zehg4S46fUb7DymOU6DHrgBFOjdX1_/view?usp=sharing"
+                      href="https://drive.google.com/file/d/13n6qMfS0TK3VASwFkuJzSLUoo7qctb9o/view?usp=share_link"
                       target="_blank"
                       class="flex items-center w-full px-6 py-3 mb-3 text-md font-bold text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto"
                       data-primary="indigo-600"
