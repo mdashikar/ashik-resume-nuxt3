@@ -47,6 +47,16 @@
       <Meta property="og:image:height" content="630" />
       <Meta property="og:image:type" content="image/jpeg" />
       <Meta property="og:image:alt" content="Md. Ashiqur Rahman" />
+      
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL523KK9E9"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KL523KK9E9');
+      </script>
     </Head>
     <HomeHero />
     <AboutMe />
