@@ -30,21 +30,21 @@
 
         <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
           <div
-            class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0"
+            class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/2 lg:mb-0 mx-4"
           >
             <div class="flex items-center justify-center">
               <div
                 class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
               >
                 <img
-                  src="https://media-exp1.licdn.com/dms/image/C4E03AQEDAeNPHIzjOA/profile-displayphoto-shrink_100_100/0/1517069582069?e=1666828800&v=beta&t=lASWxI6cFFNfCg4JxqTo_awaBkqDyliDxYXbbWq8BHM"
+                  src="https://media.licdn.com/dms/image/D4D03AQG1-Pb2vn8Jxw/profile-displayphoto-shrink_200_200/0/1705162865400?e=1718236800&v=beta&t=HhtIwwOKh0YPUxK0ixlLDEyvYiIiVnvvG2fIqLkYreo"
                   class="object-cover w-full h-full"
                 />
               </div>
               <div class="flex flex-col items-start justify-center">
                 <h4 class="font-bold text-gray-800">Jaber Ahmed</h4>
                 <p class="text-gray-600">
-                  Software engineer at Rocketing System
+                  Senior Full Stack Developer @ Worktech Labs
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@
             </blockquote>
           </div>
 
-          <div
+          <!-- <div
             class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200"
           >
             <div class="flex items-center justify-center">
@@ -67,14 +67,14 @@
                 class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
               >
                 <img
-                  src="https://media-exp1.licdn.com/dms/image/C5603AQF8xkZh3fHo6Q/profile-displayphoto-shrink_800_800/0/1615143227804?e=1666828800&v=beta&t=_4CIDmt0NZNpsZz4IDcup3qoSb21vy_VXBVzuqzJOzs"
+                  src="https://media.licdn.com/dms/image/C5603AQF8xkZh3fHo6Q/profile-displayphoto-shrink_100_100/0/1615143245078?e=1718236800&v=beta&t=kPg7kZuQ3eGh-YdJRnRd3gcd3iAW2XWvU8IhLA4YfaM"
                   class="object-cover w-full h-full"
                 />
               </div>
               <div class="flex flex-col items-start justify-center">
                 <h4 class="font-bold text-gray-800">Jaidul Islam</h4>
                 <p class="text-gray-600">
-                  Senior Software Engineer at Vivasoft Limited
+                  Senior Software Engineer @ Flarie
                 </p>
               </div>
             </div>
@@ -82,22 +82,23 @@
               "Very supportive and hard working. Helpful in team work.
               Passionate in working and improving skills."
             </blockquote>
-          </div>
+          </div> -->
           <div
-            class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3"
+            class="flex flex-col items-start justify-start w-full h-auto lg:w-1/2 mx-4"
           >
             <div class="flex items-center justify-center">
               <div
                 class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
               >
                 <img
-                  src="https://media-exp1.licdn.com/dms/image/C5603AQGVcgpdj6kcAA/profile-displayphoto-shrink_200_200/0/1649460933912?e=1667433600&v=beta&t=w3Wb5ntFgf4gdLdq-YGN5_mYmdv1RuQKbkxnIyB_fLI"
+                  src="https://media.licdn.com/dms/image/C5603AQGVcgpdj6kcAA/profile-displayphoto-shrink_200_200/0/1649460934783?e=1718236800&v=beta&t=mzdAcWZlMsVI3gwOqsmg08uik9vBwUr73ivqbS9V6FY"
                   class="object-cover w-full h-full"
                 />
               </div>
+              
               <div class="flex flex-col items-start justify-center">
                 <h4 class="font-bold text-gray-800">Farid Chowdhury</h4>
-                <p class="text-gray-600">Backend engineer at Relantin</p>
+                <p class="text-gray-600">Software Engineer @ Technovative Solutions LTD (TVS) </p>
               </div>
             </div>
             <blockquote class="mt-8 text-lg text-gray-500">
