@@ -6,4 +6,11 @@ export default defineNuxtConfig({
     // add '~tailwind.config` alias
     exposeConfig: true,
   },
+  nitro: {
+    prerender: {
+      autoSubfolderIndex: false
+    }
+  }
 });
+
+
