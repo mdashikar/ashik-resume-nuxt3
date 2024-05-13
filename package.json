@@ -13,6 +13,7 @@
     "vue-gtag-next": "^1.14.0"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.8.0"
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "wrangler": "^3.55.0"
   }
 }
