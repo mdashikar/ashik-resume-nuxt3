@@ -55,5 +55,7 @@
     <Contact />
     <Testimonial />
     <Footer />
+
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7dcb1956090c4f469b5770c335a0cd50"}'></script><!-- End Cloudflare Web Analytics -->
   </div>
 </template>
