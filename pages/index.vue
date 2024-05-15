@@ -47,6 +47,14 @@
       <Meta property="og:image:height" content="630" />
       <Meta property="og:image:type" content="image/jpeg" />
       <Meta property="og:image:alt" content="Md. Ashiqur Rahman" />
+
+      <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "mcfflssd39");
+</script>
     
     </Head>
     <HomeHero />
@@ -55,5 +63,7 @@
     <Contact />
     <Testimonial />
     <Footer />
+
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7dcb1956090c4f469b5770c335a0cd50"}'></script><!-- End Cloudflare Web Analytics -->
   </div>
 </template>
