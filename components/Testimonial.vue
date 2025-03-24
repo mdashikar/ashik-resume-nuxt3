@@ -37,7 +37,8 @@
                 class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
               >
                 <img
-                  src="https://media.licdn.com/dms/image/D4D03AQG1-Pb2vn8Jxw/profile-displayphoto-shrink_200_200/0/1705162865400?e=1718236800&v=beta&t=HhtIwwOKh0YPUxK0ixlLDEyvYiIiVnvvG2fIqLkYreo"
+                  src="https://i.pravatar.cc/200?img=1"
+                  alt="Jaber Ahmed"
                   class="object-cover w-full h-full"
                 />
               </div>
@@ -59,30 +60,6 @@
             </blockquote>
           </div>
 
-          <!-- <div
-            class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200"
-          >
-            <div class="flex items-center justify-center">
-              <div
-                class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
-              >
-                <img
-                  src="https://media.licdn.com/dms/image/C5603AQF8xkZh3fHo6Q/profile-displayphoto-shrink_100_100/0/1615143245078?e=1718236800&v=beta&t=kPg7kZuQ3eGh-YdJRnRd3gcd3iAW2XWvU8IhLA4YfaM"
-                  class="object-cover w-full h-full"
-                />
-              </div>
-              <div class="flex flex-col items-start justify-center">
-                <h4 class="font-bold text-gray-800">Jaidul Islam</h4>
-                <p class="text-gray-600">
-                  Senior Software Engineer @ Flarie
-                </p>
-              </div>
-            </div>
-            <blockquote class="mt-8 text-lg text-gray-500">
-              "Very supportive and hard working. Helpful in team work.
-              Passionate in working and improving skills."
-            </blockquote>
-          </div> -->
           <div
             class="flex flex-col items-start justify-start w-full h-auto lg:w-1/2 mx-4"
           >
@@ -91,7 +68,8 @@
                 class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
               >
                 <img
-                  src="https://media.licdn.com/dms/image/C5603AQGVcgpdj6kcAA/profile-displayphoto-shrink_200_200/0/1649460934783?e=1718236800&v=beta&t=mzdAcWZlMsVI3gwOqsmg08uik9vBwUr73ivqbS9V6FY"
+                  src="https://i.pravatar.cc/200?img=2"
+                  alt="Farid Chowdhury"
                   class="object-cover w-full h-full"
                 />
               </div>
