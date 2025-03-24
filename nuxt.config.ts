@@ -8,10 +8,15 @@ export default defineNuxtConfig({
     exposeConfig: true,
   },
   nitro: {
+    preset: "cloudflare-pages",
     prerender: {
       autoSubfolderIndex: false,
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/resume'
+      ]
     },
-    preset: "cloudflare-pages",
   },
   cloudflareAnalytics: {
     token: "7dcb1956090c4f469b5770c335a0cd50",

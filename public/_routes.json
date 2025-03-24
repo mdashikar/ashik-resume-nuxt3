@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/api/*",
+    "/_nuxt/*",
+    "/_ipx/*"
+  ],
+  "cache": {
+    "include": [
+      "/images/*",
+      "/fonts/*",
+      "/files/*",
+      "/*.ico",
+      "/*.png"
+    ]
+  }
+}

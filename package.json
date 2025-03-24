@@ -10,7 +10,9 @@
     "@vueuse/core": "^9.2.0",
     "@vueuse/nuxt": "^9.2.0",
     "nuxt": "^3.11.2",
-    "vue-gtag-next": "^1.14.0"
+    "vue-gtag-next": "^1.14.0",
+    "nitropack": "latest",
+    "@cloudflare/workers-types": "^4.20230821.0"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.8.0",
