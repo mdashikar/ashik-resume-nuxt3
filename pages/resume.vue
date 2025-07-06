@@ -4,7 +4,7 @@
       <Title>Resume | Md. Ashiqur Rahman - Senior Full Stack JavaScript Developer</Title>
       <Meta
         name="description"
-        content="Professional resume of Md. Ashiqur Rahman - Senior Full Stack JavaScript Developer with 5+ years experience. Expert in Vue.js, Node.js, React, TypeScript and modern web technologies."
+        content="Professional resume of Md. Ashiqur Rahman - Senior Full Stack JavaScript Developer with 7+ years experience. Expert in Vue.js, Node.js, React, TypeScript and modern web technologies."
       />
       <Meta
         name="keywords"
@@ -19,7 +19,7 @@
       <Meta name="format-detection" content="telephone=no" />
       
       <Meta property="og:title" content="Resume | Md. Ashiqur Rahman - Senior Full Stack JavaScript Developer" />
-      <Meta property="og:description" content="Professional resume of Md. Ashiqur Rahman - Senior Full Stack JavaScript Developer with 5+ years experience. Expert in Vue.js, Node.js, React, and modern web technologies." />
+      <Meta property="og:description" content="Professional resume of Md. Ashiqur Rahman - Senior Full Stack JavaScript Developer with 7+ years experience. Expert in Vue.js, Node.js, React, and modern web technologies." />
       <Meta property="og:type" content="profile" />
       <Meta property="og:url" content="https://ashik.dev/resume" />
       <Meta property="og:image" content="https://ashik.dev/images/ashik.jpg" />
@@ -110,7 +110,7 @@
           </div>
         </div>
         <a 
-          href="/files/Ashiqur-Rahman-Resume.pdf" 
+          href="/files/Resume_Md_Ashiqur_Rahman_Backend_2025.pdf" 
           download
           class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center transition-colors"
         >
@@ -125,8 +125,9 @@
       <section class="mb-10 bg-white rounded-lg shadow-md p-6">
         <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Professional Summary</h3>
         <p class="text-gray-700 leading-relaxed">
-          With 5+ years as a freelance developer, I've remotely collaborated with agencies and startups, creating impactful digital products. 
-          Fueled by curiosity and drive for growth, I approach projects with quiet confidence, strong communication, and a problem-solving mindset.
+          With 7+ years as a software developer, I've remotely collaborated with agencies and startups, creating impactful digital
+          products. Fueled by curiosity and a drive for growth, I approach projects with confidence, strong communication, and a problem-
+          solving mindset.
         </p>
       </section>
 
@@ -135,23 +136,29 @@
         <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Technical Skills</h3>
         
         <div class="flex flex-wrap gap-2 mt-4">
-          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">VueJS</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">NuxtJS</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">React</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">NextJS</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">TypeScript</span>
           <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">JavaScript</span>
-          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">NodeJS</span>
-          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">ExpressJS</span>
-          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">MongoDB</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">TypeScript</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Vue.js</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Nuxt.js</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">React</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Next.js</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">SolidJS</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Vuetify</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Pug</span>
+          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Node.js</span>
+          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Express.js</span>
+          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">RESTful APIs</span>
           <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">GraphQL</span>
-          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Firebase</span>
-          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Firestore</span>
+          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">RabbitMQ</span>
+          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">MongoDB</span>
+          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Redis</span>
+          <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">AWS</span>
+          <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Terraform</span>
+          <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">CI/CD Pipelines</span>
+          <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Docker</span>
           <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">HTML5</span>
           <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">CSS</span>
           <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">Git</span>
-          <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">Linux</span>
-          <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">SolidJS</span>
         </div>
       </section>
 
@@ -171,10 +178,12 @@
                 <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">01/2023 - Present</span>
               </div>
             </div>
+            <p class="text-sm text-gray-500 mb-2">Sylhet</p>
             <ul class="list-disc pl-5 text-gray-700 space-y-1">
-              <li>Led and managed a team of backend engineers, providing technical guidance, mentorship, and overseeing project deliverables.</li>
-              <li>Conducted thorough code reviews to ensure adherence to best practices, maintainability, and quality standards.</li>
-              <li>Designed and implemented complex, scalable, and high-performance backend architectures and systems.</li>
+              <li>Lead and manage a team of back-end engineers, providing technical guidance, mentorship, and overseeing project deliverables.</li>
+              <li>Conduct thorough code reviews to ensure adherence to best practices, maintainability, and quality standards.</li>
+              <li>Design and implement complex, scalable, and high-performance back-end architectures and systems.</li>
+              <li>Technologies: Node.js, Express.js, MongoDB, GraphQL, RabbitMQ, Terraform, AWS, Redis</li>
             </ul>
           </div>
           
@@ -191,10 +200,10 @@
             </div>
             <p class="text-sm text-gray-500 mb-2">Remote</p>
             <ul class="list-disc pl-5 text-gray-700 space-y-1">
-              <li>Managing tasks, assigning tasks, reviewing PR's of other team members.</li>
-              <li>Effectively planning, scheduling and arranging the tasks to ensure the project moves through its life cycle with few problems.</li>
-              <li>Structure the frontend, State management.</li>
-              <li>Used Technologies: Vue, Nuxt, React, Next, Typescript, SolidJs.</li>
+              <li>Managed and assigned tasks while reviewing pull requests (PRs) from team members to ensure code quality and alignment with project goals.</li>
+              <li>Planned, scheduled, and prioritized tasks to minimize bottlenecks and ensure smooth project progression throughout its lifecycle.</li>
+              <li>Structured frontend architecture and implemented state management solutions to optimize application performance and scalability.</li>
+              <li>Technologies used: Vue, Nuxt, React, Next, TypeScript, SolidJS</li>
             </ul>
           </div>
           
@@ -211,40 +220,102 @@
             </div>
             <p class="text-sm text-gray-500 mb-2">Sylhet, Bangladesh</p>
             <ul class="list-disc pl-5 text-gray-700 space-y-1">
-              <li>Worked closely with team members to plan, design and develop.</li>
-              <li>Design reusable components, code blocks, Integrate API and Implement Features.</li>
-              <li>Used Technologies: VueJS, NuxtJS.</li>
+              <li>Collaborated with cross-functional teams to plan, design, and develop web applications, ensuring alignment with user and business requirements.</li>
+              <li>Designed and implemented reusable, modular components and code blocks, integrated APIs, and delivered core features to enhance application functionality.</li>
+              <li>Optimized application performance using Nuxt.js server-side rendering (SSR)</li>
+              <li>Technologies used: Vue.js, Nuxt.js</li>
+            </ul>
+          </div>
+
+          <!-- Experience Item 4 -->
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h4 class="text-lg font-medium text-gray-800">Frontend VueJs Developer</h4>
+                <p class="text-gray-600">Sidy</p>
+              </div>
+              <div class="text-right">
+                <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">03/2020 - 08/2020</span>
+              </div>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Remote</p>
+            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+              <li>Designed intuitive user interfaces and collaborated with UX/UI designers to implement responsive layouts using Pug and Vuetify.</li>
+              <li>Built modular Vue.js 2 components with TypeScript, reducing redundancy and improving code maintainability</li>
+              <li>Integrated RESTful APIs with robust error handling and data validation, ensuring seamless frontend-backend communication</li>
+              <li>Technologies used: Pug, Vue.js 2, Vuetify, TypeScript</li>
+            </ul>
+          </div>
+
+          <!-- Experience Item 5 -->
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h4 class="text-lg font-medium text-gray-800">Co-Founder & Software Engineer</h4>
+                <p class="text-gray-600">HuddleByte</p>
+              </div>
+              <div class="text-right">
+                <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">09/2019 - 03/2020</span>
+              </div>
+            </div>
+            <p class="text-sm text-gray-500 mb-2">Sylhet</p>
+            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+              <li>Co-founded and bootstrapped a digital agency, delivering end-to-end web solutions for startups and SMEs while managing technical, operational, and client-facing responsibilities.</li>
+              <li>Operated as a hands-on full-stack engineer, designing and developing client projects from concept to deployment while mentoring a lean team of 2–3 developers.</li>
+            </ul>
+          </div>
+
+          <!-- Experience Item 6 -->
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h4 class="text-lg font-medium text-gray-800">Web Developer</h4>
+                <p class="text-gray-600">Online Marketplace</p>
+              </div>
+              <div class="text-right">
+                <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">03/2018 - 08/2019</span>
+              </div>
+            </div>
+            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+              <li>Developed a scalable e-commerce platform using the MEVN stack, streamlining product discovery, checkout, and payment integrations.</li>
+              <li>Built a POS web app for merchants, enabling inventory tracking.</li>
+              <li>Developed an E-Patient Health system with appointment scheduling using Vue.js and Node.js.</li>
+              <li>Collaborated with cross-functional teams to align technical solutions with business needs and deadlines.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- Personal Projects Section -->
+      <!-- Freelance Projects Section -->
       <section class="mb-10 bg-white rounded-lg shadow-md p-6">
-        <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Personal Projects</h3>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Freelance Projects</h3>
         
         <div class="space-y-6">
           <div>
             <div class="flex justify-between items-start mb-2">
-              <h4 class="text-lg font-medium text-gray-800">V4krk</h4>
-              <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">08/2021 - 12/2021</span>
+              <h4 class="text-lg font-medium text-gray-800">CRM Project</h4>
+              <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">10/2022 - 02/2023</span>
             </div>
+            <p class="text-sm text-gray-500 mb-2">Digital Solutions Provider</p>
             <ul class="list-disc pl-5 text-gray-700 space-y-1">
-              <li>Developed the front-end and RESTful backend server.</li>
-              <li>Admin dashboard with full functionality.</li>
-              <li>Utilized: Vue, Nuxt, Express, MongoDB, NodeJS, HTML, CSS, Tailwindcss, Ant.design.</li>
+              <li>Led a team of 4 developers, providing technical direction, mentorship, and code reviews to ensure alignment with project goals and deadlines.</li>
+              <li>Designed reusable UI components and standardized frontend architecture, reducing development time by 25% for subsequent features.</li>
+              <li>Integrated RESTful APIs with robust error handling and data validation, improving system reliability and user experience.</li>
+              <li>Technologies: Vue.js, TypeScript, Node.js, Express.js, MongoDB</li>
             </ul>
           </div>
           
           <div>
             <div class="flex justify-between items-start mb-2">
-              <h4 class="text-lg font-medium text-gray-800">Innovie</h4>
-              <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">06/2021 - 08/2021</span>
+              <h4 class="text-lg font-medium text-gray-800">V4krk</h4>
+              <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">08/2021 - 12/2021</span>
             </div>
+            <p class="text-sm text-gray-500 mb-2">Web Application Development</p>
             <ul class="list-disc pl-5 text-gray-700 space-y-1">
-              <li>Design UI Components, Integrate Rest API.</li>
-              <li>Translated the design team's UX wireframes and mockups in to responsive, interactive features, using HTML/CSS and JavaScript.</li>
-              <li>Utilized: Vue, Tailwindcss, Ant.design.</li>
+              <li>Engineered a full-stack web application, building both the frontend (Vue.js, Nuxt.js) and backend (Node.js, Express.js, MongoDB) from scratch.</li>
+              <li>Developed a feature-rich admin dashboard with real-time analytics, user role management, and data visualization tools to streamline client operations.</li>
+              <li>Optimized API performance by implementing caching and efficient database queries, reducing average response times by 35%.</li>
+              <li>Technologies: Vue.js, Nuxt.js, Node.js, Express.js, MongoDB</li>
             </ul>
           </div>
         </div>
@@ -261,7 +332,7 @@
                 <h4 class="text-lg font-medium text-gray-800">Bachelor in Computer Science and Engineering</h4>
                 <p class="text-gray-600">Leading University, Sylhet</p>
               </div>
-              <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">02/2014 - 01/2018</span>
+              <span class="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">02/2018</span>
             </div>
             <p class="text-sm text-gray-600 mt-2">GPA: 3.04</p>
             <div class="mt-2">
@@ -286,6 +357,34 @@
             <h4 class="font-medium text-gray-800">Bangla</h4>
             <p class="text-gray-600">Native or Bilingual Proficiency</p>
           </div>
+        </div>
+      </section>
+
+      <!-- Socials Section -->
+      <section class="bg-white rounded-lg shadow-md p-6 mb-10">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Socials & Profiles</h3>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="https://www.ashik.dev" target="_blank" class="flex items-center text-gray-700 hover:text-indigo-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            Portfolio: www.ashik.dev
+          </a>
+          
+          <a href="https://linkedin.com/in/mdashikar" target="_blank" class="flex items-center text-gray-700 hover:text-indigo-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn: linkedin.com/in/mdashikar
+          </a>
+          
+          <a href="https://github.com/mdashikar" target="_blank" class="flex items-center text-gray-700 hover:text-indigo-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub: github.com/mdashikar
+          </a>
         </div>
       </section>
     </div>
