@@ -9,15 +9,8 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: "cloudflare-pages",
-    prerender: {
-      autoSubfolderIndex: false,
-      crawlLinks: true,
-      routes: [
-        '/',
-        '/resume'
-      ]
-    },
   },
+  ssr: false,
   cloudflareAnalytics: {
     token: "7dcb1956090c4f469b5770c335a0cd50",
   },
@@ -60,10 +53,7 @@ export default defineNuxtConfig({
           type: "text/javascript",
           tagPosition: "bodyClose",
         },
-      ],
-      __dangerouslyDisableSanitizersByTagID: {
-        reb2b: ["innerHTML"],
-      },
-    },
+      ]
+    }
   },
 });

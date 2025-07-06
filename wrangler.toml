@@ -1,0 +1,5 @@
+name = "ashik-resume-nuxt3"
+compatibility_date = "2024-05-12"
+
+[site]
+bucket = "dist"
