@@ -1,7 +1,7 @@
 <template>
   <footer class="no-print border-t border-line">
-    <div class="container-site flex flex-col gap-4 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-      <p>© {{ year }} {{ profile.name }} · <span class="font-mono">ashik.dev</span></p>
+    <div class="container-site flex flex-col gap-3 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+      <p>© {{ year }} {{ profile.name }}</p>
       <ul class="flex flex-wrap gap-x-5 gap-y-2">
         <li v-for="link in profile.links" :key="link.label">
           <a :href="link.href" target="_blank" rel="noopener" class="transition-colors hover:text-ink">{{ link.label }}</a>

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: token("paper"),
+        paper: token("bg"),
         surface: token("surface"),
         ink: token("ink"),
         muted: token("muted"),
@@ -16,12 +16,11 @@ module.exports = {
         ok: token("ok"),
       },
       fontFamily: {
-        sans: ["Geist", "ui-sans-serif", "system-ui", "sans-serif"],
-        mono: ['"Geist Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
-        serif: ['"Instrument Serif"', "ui-serif", "Georgia", "serif"],
+        sans: ["Archivo", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ['"Martian Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       maxWidth: {
-        site: "72rem",
+        site: "76rem",
       },
     },
   },

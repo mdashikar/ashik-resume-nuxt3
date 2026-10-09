@@ -1,9 +1,9 @@
 <template>
   <div class="container-site py-12 sm:py-16 print:p-0">
-    <article class="mx-auto max-w-4xl rounded-2xl border border-line bg-surface p-6 sm:p-12 print:border-0 print:p-0">
+    <article class="mx-auto max-w-4xl border border-line bg-surface p-5 sm:p-12 print:border-0 print:p-0">
       <header class="flex flex-col gap-8 border-b border-line pb-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h1 class="text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">{{ profile.name }}</h1>
+          <h1 class="font-display text-[2rem] font-bold leading-none tracking-[-0.03em] sm:text-5xl">{{ profile.name }}</h1>
           <p class="mt-2 text-lg text-muted">{{ profile.title }} · {{ profile.focus }}</p>
           <ul class="mt-5 flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
             <li><a :href="`mailto:${profile.email}`" class="link">{{ profile.email }}</a></li>
@@ -16,24 +16,24 @@
               <a :href="link.href" target="_blank" rel="noopener" class="link">{{ link.handle }}</a>
             </li>
           </ul>
-          <p class="mt-4 font-mono text-xs text-accent">{{ profile.availability }}</p>
+          <p class="mt-4 text-sm font-medium text-accent">{{ profile.availability }}</p>
         </div>
         <div class="no-print flex flex-none gap-2">
           <a :href="site.resumePdf" download class="btn-primary">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M5 20h14" /></svg>
-            PDF
+            Download PDF
           </a>
           <button type="button" class="btn-ghost" @click="print">Print</button>
         </div>
       </header>
 
       <section class="resume-section">
-        <h2 class="eyebrow">Summary</h2>
+        <h2 class="label pt-1">Summary</h2>
         <p class="leading-relaxed">{{ profile.summary }}</p>
       </section>
 
       <section class="resume-section">
-        <h2 class="eyebrow">Experience</h2>
+        <h2 class="label pt-1">Experience</h2>
         <div class="space-y-8">
           <div v-for="role in experience" :key="role.title + role.start" class="break-inside-avoid">
             <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
@@ -53,7 +53,7 @@
       </section>
 
       <section class="resume-section">
-        <h2 class="eyebrow">Key projects</h2>
+        <h2 class="label pt-1">Key projects</h2>
         <div class="space-y-6">
           <div v-for="project in projects" :key="project.name" class="break-inside-avoid">
             <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
@@ -70,7 +70,7 @@
       </section>
 
       <section class="resume-section">
-        <h2 class="eyebrow">Skills</h2>
+        <h2 class="label pt-1">Skills</h2>
         <dl class="space-y-2 text-[15px]">
           <div v-for="group in skills" :key="group.group" class="grid gap-1 sm:grid-cols-[9rem_1fr]">
             <dt class="font-medium">{{ group.group }}</dt>
@@ -80,7 +80,7 @@
       </section>
 
       <section class="resume-section">
-        <h2 class="eyebrow">Education</h2>
+        <h2 class="label pt-1">Education</h2>
         <div>
           <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
             <h3 class="font-semibold">{{ education.degree }}</h3>
@@ -109,6 +109,6 @@ const print = () => window.print();
 
 <style scoped>
 .resume-section {
-  @apply grid gap-4 border-b border-line py-8 last:border-0 last:pb-0 md:grid-cols-[9rem_1fr];
+  @apply grid gap-4 border-b border-line py-8 last:border-0 last:pb-0 md:grid-cols-[9rem_minmax(0,1fr)];
 }
 </style>

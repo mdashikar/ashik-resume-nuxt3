@@ -23,8 +23,8 @@ export const usePageSeo = (opts: { title: string; description: string; path: str
     twitterDescription: opts.description,
     twitterImage: site.ogImage,
     themeColor: [
-      { content: "#f7f6f2", media: "(prefers-color-scheme: light)" },
-      { content: "#0c0c0b", media: "(prefers-color-scheme: dark)" },
+      { content: "#f0f3f6", media: "(prefers-color-scheme: light)" },
+      { content: "#0a101c", media: "(prefers-color-scheme: dark)" },
     ],
   });
 

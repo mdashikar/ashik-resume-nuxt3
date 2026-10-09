@@ -2,25 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Layout: an engineering spec sheet. A narrow rail of labels on the left,
+  content on the right, hairline rules between records, and one system
+  diagram as the hero's evidence.
+
+  Color: cool slate paper and navy ink (matches the PDF resume), one cobalt
+  accent for links and the diagram's live path, green only for "up" state.
+  Type: Archivo Expanded for display, Archivo for reading, Martian Mono for
+  labels, dates and figures.
+*/
 @layer base {
   :root {
-    --paper: 247 246 242;
+    --bg: 240 243 246;
     --surface: 255 255 255;
-    --ink: 20 20 19;
-    --muted: 99 98 92;
-    --line: 226 224 216;
-    --accent: 194 65 12;
+    --ink: 15 27 45;
+    --muted: 84 97 117;
+    --line: 211 218 228;
+    --accent: 37 76 214;
     --ok: 21 128 61;
     color-scheme: light;
   }
 
   .dark {
-    --paper: 12 12 11;
-    --surface: 22 22 20;
-    --ink: 240 239 233;
-    --muted: 160 158 150;
-    --line: 44 43 40;
-    --accent: 251 146 60;
+    --bg: 10 16 28;
+    --surface: 17 26 42;
+    --ink: 228 234 243;
+    --muted: 146 159 181;
+    --line: 36 50 74;
+    --accent: 132 160 255;
     --ok: 74 222 128;
     color-scheme: dark;
   }
@@ -31,8 +41,13 @@
   }
 
   body {
-    @apply bg-paper font-sans text-ink antialiased;
-    font-feature-settings: "ss01", "cv11";
+    @apply bg-paper font-sans text-[17px] leading-relaxed text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
   }
 
   ::selection {
@@ -44,7 +59,7 @@
   }
 
   section[id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 4.5rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -55,6 +70,7 @@
     *::before,
     *::after {
       animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
   }
@@ -62,19 +78,30 @@
 
 @layer components {
   .container-site {
-    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-10;
   }
 
-  .eyebrow {
-    @apply font-mono text-xs uppercase tracking-[0.14em] text-muted;
+  .font-display {
+    font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+    font-stretch: 125%;
+  }
+
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.08em] text-muted;
+    font-stretch: 87.5%;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
   }
 
   .chip {
-    @apply inline-flex items-center rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-muted;
+    @apply inline-flex items-center rounded-[3px] border border-line px-1.5 py-0.5 font-mono text-[11px] leading-5 text-muted;
+    font-stretch: 87.5%;
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors;
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-[15px] font-medium transition-colors;
   }
 
   .btn-primary {
@@ -82,18 +109,23 @@
   }
 
   .btn-ghost {
-    @apply btn border border-line text-ink hover:border-ink;
+    @apply btn border border-line bg-surface text-ink hover:border-ink;
   }
 
   .link {
-    @apply underline decoration-line decoration-1 underline-offset-4 transition-colors hover:decoration-accent;
+    @apply text-accent underline decoration-accent/30 underline-offset-[3px] transition-colors hover:decoration-accent;
+  }
+
+  /* Section header: label rail on the left, content column on the right */
+  .rail {
+    @apply grid gap-x-10 gap-y-6 md:grid-cols-[11rem_minmax(0,1fr)];
   }
 }
 
 @media print {
   :root,
   .dark {
-    --paper: 255 255 255;
+    --bg: 255 255 255;
     --surface: 255 255 255;
     --ink: 0 0 0;
     --muted: 70 70 70;

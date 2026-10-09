@@ -1,23 +1,22 @@
 <template>
-  <header class="no-print sticky top-0 z-40 border-b border-line/70 bg-paper/80 backdrop-blur-md">
-    <div class="container-site flex h-16 items-center justify-between">
-      <NuxtLink to="/" class="font-mono text-sm font-medium tracking-tight" @click="open = false">
+  <header class="no-print sticky top-0 z-40 border-b border-line bg-paper/85 backdrop-blur-md">
+    <div class="container-site flex h-14 items-center justify-between gap-6">
+      <NuxtLink to="/" class="font-mono text-[13px] font-medium" @click="open = false">
         ashik<span class="text-accent">.dev</span>
       </NuxtLink>
 
-      <nav class="hidden items-center gap-7 text-sm text-muted md:flex" aria-label="Primary">
+      <nav class="hidden items-center gap-7 text-[15px] text-muted md:flex" aria-label="Primary">
         <NuxtLink v-for="link in navLinks" :key="link.href" :to="link.href" class="transition-colors hover:text-ink">
           {{ link.label }}
         </NuxtLink>
-        <NuxtLink to="/resume" class="transition-colors hover:text-ink" active-class="text-ink">Resume</NuxtLink>
       </nav>
 
       <div class="flex items-center gap-2">
         <ThemeToggle />
-        <a :href="`mailto:${profile.email}`" class="btn-primary hidden !py-2 sm:inline-flex">Get in touch</a>
+        <NuxtLink to="/resume" class="btn-primary hidden !py-1.5 sm:inline-flex">Resume</NuxtLink>
         <button
           type="button"
-          class="grid h-9 w-9 place-items-center rounded-full border border-line md:hidden"
+          class="grid h-9 w-9 place-items-center rounded-md border border-line md:hidden"
           :aria-expanded="open"
           aria-controls="mobile-nav"
           aria-label="Toggle menu"
@@ -34,17 +33,16 @@
     </div>
 
     <nav v-show="open" id="mobile-nav" class="border-t border-line md:hidden" aria-label="Mobile">
-      <div class="container-site flex flex-col py-2">
+      <div class="container-site flex flex-col divide-y divide-line">
         <NuxtLink
           v-for="link in [...navLinks, { label: 'Resume', href: '/resume' }]"
           :key="link.href"
           :to="link.href"
-          class="py-3 text-base"
+          class="py-3.5"
           @click="open = false"
         >
           {{ link.label }}
         </NuxtLink>
-        <a :href="`mailto:${profile.email}`" class="btn-primary my-3">Get in touch</a>
       </div>
     </nav>
   </header>
@@ -52,7 +50,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { navLinks, profile } from "~/data/profile";
+import { navLinks } from "~/data/profile";
 
 const open = ref(false);
 </script>

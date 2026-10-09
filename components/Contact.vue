@@ -1,43 +1,34 @@
 <template>
-  <section id="contact" class="container-site py-20 sm:py-28">
-    <div class="relative overflow-hidden rounded-3xl bg-ink px-6 py-14 text-paper sm:px-12 sm:py-20">
-      <div class="contact-glow pointer-events-none absolute inset-0" aria-hidden="true" />
-      <div class="relative">
-        <p class="font-mono text-xs uppercase tracking-[0.14em] text-paper/60">05 — Contact</p>
-        <h2 class="mt-5 max-w-3xl text-4xl font-semibold tracking-[-0.035em] sm:text-6xl">
-          Have a backend that needs to scale — or a team that needs a lead?
-        </h2>
-        <p class="mt-5 max-w-xl text-lg text-paper/70">
-          I'm open to senior and lead engineering roles, remote or on-site, and happy to relocate. EU work sponsorship
-          welcome.
-        </p>
+  <PageSection id="contact" title="Contact">
+    <p class="max-w-[52ch] text-xl leading-snug">
+      I'm looking for senior and lead backend roles, remote or on-site. I'm happy to relocate, and EU work sponsorship
+      is welcome.
+    </p>
 
-        <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <a
-            :href="`mailto:${profile.email}`"
-            class="btn bg-paper text-ink hover:bg-accent hover:text-paper"
-          >
-            {{ profile.email }}
-          </a>
-          <button
-            type="button"
-            class="btn border border-paper/25 text-paper hover:border-paper"
-            @click="copyEmail"
-          >
-            {{ copied ? "Copied ✓" : "Copy email" }}
-          </button>
-        </div>
-
-        <ul class="mt-12 flex flex-wrap gap-x-6 gap-y-2 text-sm text-paper/70">
-          <li v-for="link in profile.links" :key="link.label">
-            <a :href="link.href" target="_blank" rel="noopener" class="transition-colors hover:text-paper">
-              {{ link.label }} ↗
-            </a>
-          </li>
-        </ul>
+    <div class="mt-10 border-y border-line py-8">
+      <p class="label">Email</p>
+      <div class="mt-3 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <a
+          :href="`mailto:${profile.email}`"
+          class="font-display break-all text-2xl font-bold tracking-[-0.02em] transition-colors hover:text-accent sm:text-4xl"
+        >
+          {{ profile.email }}
+        </a>
+        <button type="button" class="btn-ghost !py-2" @click="copyEmail">
+          {{ copied ? "Copied" : "Copy address" }}
+        </button>
       </div>
     </div>
-  </section>
+
+    <dl class="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+      <div v-for="link in profile.links" :key="link.label" class="min-w-0">
+        <dt class="label">{{ link.label }}</dt>
+        <dd class="mt-1 truncate">
+          <a :href="link.href" target="_blank" rel="noopener" class="link">{{ link.handle }}</a>
+        </dd>
+      </div>
+    </dl>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
@@ -56,9 +47,3 @@ const copyEmail = async () => {
   }
 };
 </script>
-
-<style scoped>
-.contact-glow {
-  background: radial-gradient(40rem 20rem at 100% 0%, rgb(var(--accent) / 0.35), transparent 70%);
-}
-</style>

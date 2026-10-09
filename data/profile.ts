@@ -1,5 +1,5 @@
 // Single source of truth for the site's content.
-// Mirrors public/files/Md_Ashiqur_Rahman_Resume_2026.pdf — update both together.
+// Mirrors public/files/Md_Ashiqur_Rahman_Resume_2026.pdf. Update both together.
 
 export const site = {
   url: "https://ashik.dev",
@@ -17,9 +17,11 @@ export const profile = {
   email: "md.ashik.ar@gmail.com",
   phone: "+880 1750 358866",
   location: "Sylhet, Bangladesh",
-  availability: "Open to relocation · EU work sponsorship welcome",
+  availability: "Open to relocation. EU work sponsorship welcome.",
+  intro:
+    "Full-stack engineer focused on backend and cloud. I design Node.js systems, run their AWS infrastructure with Terraform, and lead the engineers who build them.",
   summary:
-    "Full-stack engineer with 7+ years of experience building scalable backend systems and leading engineering teams at startups and agencies. At Dorik, I architected and shipped multiple production applications — including Consently.net (600+ lifetime licenses sold) and Postmonk.co (built solo, end-to-end) — while managing cloud infrastructure and a backend team serving 100k+ users.",
+    "Full-stack engineer with 7+ years of experience building backend systems and leading engineering teams at startups and agencies. At Dorik I architected and shipped Consently.net, which has sold 600+ lifetime licenses, and built Postmonk.co on my own from start to finish. I also run the cloud infrastructure and lead the backend team behind products used by 100k+ people.",
   links: [
     { label: "GitHub", handle: "github.com/mdashikar", href: "https://github.com/mdashikar" },
     { label: "LinkedIn", handle: "linkedin.com/in/mdashikar", href: "https://www.linkedin.com/in/mdashikar" },
@@ -32,23 +34,25 @@ export const profile = {
   ],
 };
 
-export const highlights = [
-  { value: "7+", label: "years shipping production software" },
-  { value: "100k+", label: "users served across Dorik's product suite" },
-  { value: "600+", label: "Consently lifetime licenses sold on AppSumo" },
-  { value: "99.99%", label: "Consently platform uptime" },
+// Short facts shown beside the intro
+export const facts = [
+  { label: "Experience", value: "7+ years" },
+  { label: "Team", value: "Lead of 4+ backend engineers" },
+  { label: "Scale", value: "100k+ users across Dorik" },
+  { label: "Reliability", value: "99.9%+ uptime on Dorik services" },
 ];
 
 export interface Project {
   name: string;
   url: string;
   tagline: string;
+  year: string;
   context: string;
   role: string;
-  description: string;
-  points: string[];
+  summary: string;
+  built: string[];
+  outcome: string;
   stack: string[];
-  stats?: { value: string; label: string }[];
 }
 
 export const projects: Project[] = [
@@ -56,49 +60,50 @@ export const projects: Project[] = [
     name: "Consently",
     url: "https://consently.net",
     tagline: "Consent management platform",
-    context: "Dorik · Q3 2024",
+    year: "2024",
+    context: "Dorik",
     role: "Sole backend engineer",
-    description:
-      "A GDPR / ePrivacy consent platform. I owned the entire backend — API design, data modelling, compliance workflows, background processing and the AWS infrastructure underneath it.",
-    points: [
-      "Launched on AppSumo in Jan 2026 — 600+ lifetime licenses sold within months",
-      "BullMQ job processing for compliance workflows; infra provisioned with Terraform on AWS ECS",
-      "Patterns established here were adopted across the engineering team",
+    summary:
+      "A GDPR and ePrivacy consent platform. Site owners add a consent banner, and Consently records each visitor's choice and handles the compliance work around it.",
+    built: [
+      "Designed the API, data model and compliance workflows from scratch",
+      "Background job processing with BullMQ and Redis",
+      "AWS infrastructure on ECS, provisioned with Terraform",
     ],
+    outcome:
+      "Launched on AppSumo in January 2026 and sold 600+ lifetime licenses within months. It now serves 920+ clients at 99.99% uptime, and its backend patterns were adopted across Dorik's engineering team.",
     stack: ["Node.js", "Express", "MongoDB", "BullMQ", "Redis", "AWS ECS", "Terraform"],
-    stats: [
-      { value: "920+", label: "clients" },
-      { value: "894", label: "domains" },
-      { value: "672K+", label: "consents / month" },
-      { value: "11M+", label: "pageviews / month" },
-    ],
   },
   {
     name: "Postmonk",
     url: "https://postmonk.co",
     tagline: "Social media scheduling",
-    context: "Dorik · Q2 2026",
-    role: "Sole engineer, full-stack",
-    description:
-      "Built end-to-end — frontend, backend, deployment — as the only engineer. Schedules and publishes content across five social networks.",
-    points: [
-      "Integrated Facebook, Instagram, X, LinkedIn and YouTube APIs",
-      "Queue-based scheduling powered by BullMQ and Redis",
+    year: "2026",
+    context: "Dorik",
+    role: "Sole engineer, frontend and backend",
+    summary: "Plan and schedule posts to Facebook, Instagram, X, LinkedIn and YouTube from one place.",
+    built: [
+      "Built the whole product myself, from architecture to deployment",
+      "Integrated five social platform APIs",
+      "Queue-based scheduling with BullMQ and Redis",
     ],
+    outcome: "Launched in Q2 2026.",
     stack: ["Node.js", "MongoDB", "Redis", "BullMQ", "Vue", "Nuxt"],
   },
   {
     name: "Feevox",
     url: "https://feevox.com",
-    tagline: "Customer feedback & product roadmaps",
-    context: "Solo project",
-    role: "Founder & engineer",
-    description:
-      "A full-stack SaaS for product teams: idea collection, community voting, public roadmaps and changelogs.",
-    points: [
+    tagline: "Feedback and product roadmaps",
+    year: "Ongoing",
+    context: "Own product",
+    role: "Solo project",
+    summary:
+      "A feedback tool for product teams. Users submit ideas and vote on them, and teams publish a public roadmap and changelog.",
+    built: [
       "Embeddable widget, ClickUp integration, webhooks and custom domains",
-      "Multi-tier billing with Stripe — Free, Pro and Team plans",
+      "Subscription billing with Stripe on Free, Pro and Team plans ($9 to $29 a month)",
     ],
+    outcome: "Live at feevox.com.",
     stack: ["Node.js", "Vue", "Nuxt", "MongoDB", "Redis", "Stripe"],
   },
 ];
@@ -121,25 +126,25 @@ export const experience: Role[] = [
     start: "Apr 2025",
     end: "Present",
     points: [
-      "Built Postmonk.co end-to-end as sole engineer — from architecture through deployment — integrating 5+ social platform APIs with BullMQ/Redis queue-based scheduling.",
-      "Lead the backend team of 4+ engineers: hiring, mentorship, task planning and performance oversight.",
-      "Manage deployments of all Dorik services on AWS (ECS, EC2, Lambda), serving 100k+ users.",
-      "Own infrastructure provisioning and scaling with Terraform; oversee CI/CD and operational reliability at 99.9%+ uptime.",
-      "Define engineering standards: code review, architecture decisions and cross-team technical alignment.",
+      "Built Postmonk.co alone, from architecture to deployment, with five social platform integrations and BullMQ/Redis scheduling.",
+      "Lead the backend team of 4+ engineers, covering hiring, mentoring, planning and performance reviews.",
+      "Deploy and operate all Dorik services on AWS ECS, EC2 and Lambda for 100k+ users.",
+      "Provision and scale infrastructure with Terraform and keep CI/CD and uptime at 99.9%+.",
+      "Set engineering standards for code review, architecture decisions and cross-team alignment.",
     ],
     stack: ["Node.js", "Express", "MongoDB", "GraphQL", "BullMQ", "RabbitMQ", "Redis", "Terraform", "AWS", "Docker"],
   },
   {
-    title: "Senior Software Engineer (Backend)",
+    title: "Senior Software Engineer, Backend",
     company: "Dorik",
     location: "Sylhet, Bangladesh",
     start: "Jan 2023",
     end: "Apr 2025",
     points: [
-      "Architected and delivered Consently.net, owning the entire backend: API design, data modelling, GDPR/ePrivacy compliance workflows and infrastructure.",
-      "Platform now serves 920+ clients across 894 domains — 672K+ monthly consents over 11M+ monthly pageviews at 99.99% uptime.",
-      "Designed high-performance backend systems for compliance workflows; established patterns adopted across the team.",
-      "Code reviews and technical mentorship for junior and mid-level engineers.",
+      "Architected and delivered Consently.net and owned its whole backend: API design, data model, GDPR and ePrivacy workflows, and infrastructure.",
+      "Consently now serves 920+ clients on 894 domains, handling 672K+ consents a month across 11M+ pageviews at 99.99% uptime.",
+      "Built high-performance compliance systems whose patterns the rest of the team adopted.",
+      "Reviewed code and mentored junior and mid-level engineers.",
     ],
     stack: ["Node.js", "Express", "MongoDB", "GraphQL", "BullMQ", "RabbitMQ", "Redis", "Terraform", "AWS"],
   },
@@ -150,9 +155,9 @@ export const experience: Role[] = [
     start: "Nov 2021",
     end: "Oct 2022",
     points: [
-      "Managed task assignment and pull request reviews for a team of 3+ developers.",
-      "Structured frontend architecture and state management across multiple client projects.",
-      "Planned and prioritised work to remove bottlenecks across the project lifecycle.",
+      "Assigned work and reviewed pull requests for a team of 3+ developers.",
+      "Set up frontend architecture and state management across several client projects.",
+      "Planned and prioritised work to keep delivery moving across each project.",
     ],
     stack: ["Vue", "Nuxt", "React", "Next.js", "TypeScript", "SolidJS"],
   },
@@ -163,8 +168,8 @@ export const experience: Role[] = [
     start: "Feb 2021",
     end: "Oct 2021",
     points: [
-      "Built reusable, modular components and integrated REST APIs for production applications.",
-      "Improved page load times by 40%+ with Nuxt server-side rendering.",
+      "Built reusable components and integrated REST APIs for production apps.",
+      "Cut page load times by 40%+ with Nuxt server-side rendering.",
     ],
     stack: ["Vue", "Nuxt"],
   },
@@ -175,8 +180,8 @@ export const experience: Role[] = [
     start: "Sep 2019",
     end: "Mar 2020",
     points: [
-      "Co-founded a digital agency delivering end-to-end web solutions for startups and SMEs.",
-      "Full-stack engineer on 10+ client projects from concept to deployment, mentoring 2–3 developers.",
+      "Co-founded a digital agency building web products for startups and small businesses.",
+      "Worked full-stack on 10+ client projects and mentored 2 to 3 developers.",
     ],
     stack: [],
   },
@@ -189,11 +194,11 @@ export const skills = [
   },
   {
     group: "Cloud & DevOps",
-    items: ["AWS ECS", "AWS EC2", "AWS Lambda", "Terraform", "Docker", "CI/CD pipelines", "Infrastructure as Code"],
+    items: ["AWS ECS", "AWS EC2", "AWS Lambda", "Terraform", "Docker", "CI/CD pipelines", "Infrastructure as code"],
   },
   {
     group: "Frontend",
-    items: ["JavaScript", "TypeScript", "Vue", "Nuxt", "React", "Next.js", "SolidJS", "Vuetify", "Pinia / Vuex / Redux"],
+    items: ["JavaScript", "TypeScript", "Vue", "Nuxt", "React", "Next.js", "SolidJS", "Vuetify", "Pinia, Vuex, Redux"],
   },
   {
     group: "Practices",
@@ -220,7 +225,7 @@ export const testimonials = [
     name: "Jaber Ahmed",
     role: "Senior Full Stack Developer, Worktech Labs",
     quote:
-      "Ashik is an amazing guy to work with. He possesses diverse, stunning tech skills, but what amazed me most is his continuous strive to learn more. In vacancy announcements we often see that an 'anything-can-do attitude' is required — IMO, he is the perfect example of such a talent. In the office he is at his best as a great professional, while outside the office you might find him a great friend.",
+      "Ashik is an amazing guy to work with. He possesses diverse, stunning tech skills, but what amazed me most is his continuous strive to learn more. In vacancy announcements we often see that an 'anything can do' attitude is required. IMO, he is the perfect example of such a talent. In the office he is at his best as a great professional, while outside the office you might find him a great friend.",
   },
 ];
 

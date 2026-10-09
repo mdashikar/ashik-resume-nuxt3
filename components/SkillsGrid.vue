@@ -1,24 +1,18 @@
 <template>
-  <section id="skills" class="container-site py-20 sm:py-28">
-    <SectionHeading index="03" label="Toolbox">
-      Mostly TypeScript and Node, running on AWS, provisioned with Terraform.
-    </SectionHeading>
-
-    <div class="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
-      <div v-for="group in skills" :key="group.group" class="bg-paper p-6 sm:p-8">
-        <h3 class="eyebrow">{{ group.group }}</h3>
-        <ul class="mt-5 flex flex-wrap gap-2">
-          <li
-            v-for="item in group.items"
-            :key="item"
-            class="rounded-lg border border-line bg-surface px-3 py-1.5 text-sm"
-          >
-            {{ item }}
-          </li>
-        </ul>
+  <PageSection id="skills" title="Skills">
+    <dl class="divide-y divide-line border-y border-line">
+      <div v-for="group in skills" :key="group.group" class="grid gap-x-8 gap-y-3 py-6 lg:grid-cols-[9.5rem_minmax(0,1fr)]">
+        <dt class="label pt-1.5">{{ group.group }}</dt>
+        <dd>
+          <ul class="flex flex-wrap gap-x-2 gap-y-2">
+            <li v-for="item in group.items" :key="item" class="rounded-[3px] border border-line bg-surface px-2.5 py-1 text-[15px]">
+              {{ item }}
+            </li>
+          </ul>
+        </dd>
       </div>
-    </div>
-  </section>
+    </dl>
+  </PageSection>
 </template>
 
 <script setup lang="ts">
