@@ -1,33 +1,43 @@
 # ashik.dev
 
-Personal portfolio and web resume for Md Ashiqur Rahman — built with Nuxt 3 + Tailwind CSS and deployed to Cloudflare Pages.
+Personal site and web resume for Md Ashiqur Rahman. Nuxt 3 + Tailwind CSS, prerendered to static HTML and hosted on Cloudflare Pages.
 
 ## Editing content
 
-All copy lives in [`data/profile.ts`](data/profile.ts): summary, highlights, projects, experience, skills, education and testimonials. Both the home page and `/resume` render from it.
+All copy lives in [`data/profile.ts`](data/profile.ts):
 
-When the resume changes, update `data/profile.ts` **and** replace the PDF in `public/files/` (then update `site.resumePdf` if the filename changes). Old PDF URLs are 301-redirected via `routeRules` in `nuxt.config.ts`.
+- `profile`: name, intro, availability, links
+- `building`: products I'm working on now (Feevox, Erestro)
+- `shipped`: products shipped at Dorik (Consently, Postmonk)
+- `experience`, `skills`, `education`
+
+The home page and `/resume` both render from it. The downloadable PDF in `public/files/` is a separate document, so update it too when the resume changes (and `site.resumePdf` if the filename changes). Old PDF URLs are 301-redirected in the `nitro:config` hook in `nuxt.config.ts`.
 
 ## Structure
 
 ```
-data/profile.ts           content (single source of truth)
-pages/index.vue           home: hero, work, experience, skills, testimonials, contact
-pages/resume.vue          print-friendly web resume + PDF download
-components/               sections and UI pieces
-composables/usePageSeo.ts meta tags, Open Graph and JSON-LD
-assets/css/main.css       theme tokens (light / dark) and base styles
+data/profile.ts            content (single source of truth)
+pages/index.vue            home: hero, now building, shipped, experience, contact
+pages/resume.vue           print-friendly web resume + PDF download
+error.vue                  404 and error page
+components/                sections and UI pieces
+composables/usePageSeo.ts  meta tags, Open Graph and JSON-LD
+assets/css/main.css        theme tokens (light / dark), base styles, print styles
+public/                    favicons, OG image, robots.txt, sitemap.xml, resume PDF
 ```
 
-Colors are CSS variables (`--paper`, `--ink`, `--accent`, …) defined in `assets/css/main.css` and exposed to Tailwind in `tailwind.config.js`. Dark mode follows the system setting until the visitor toggles it.
+Colours are CSS variables (`--bg`, `--ink`, `--accent`, …) defined in `assets/css/main.css` and exposed to Tailwind in `tailwind.config.js`. Dark mode follows the system setting until the visitor toggles it.
 
 ## Development
 
 ```bash
 npm install
 npm run dev        # http://localhost:3000
+npm run typecheck  # vue-tsc
 npm run generate   # static, prerendered build in dist/
 npm run cf-preview # preview dist/ with Wrangler
 ```
 
-Pages are server-rendered at build time (prerendered), so search engines and link previews get full HTML.
+## Deploying
+
+Cloudflare Pages: build command `npm run generate` (or `npm run build`, which produces the same static output), output directory `dist`.

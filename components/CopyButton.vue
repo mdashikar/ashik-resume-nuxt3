@@ -1,22 +1,29 @@
 <template>
-  <button type="button" class="btn-ghost flex-none !px-3 !py-1.5 text-sm" @click="copy">
-    {{ copied ? "Copied" : "Copy" }}
+  <button
+    type="button"
+    class="btn flex-none !py-1.5 text-sm"
+    :class="onBand ? 'border border-on-band/30 text-on-band hover:border-on-band' : 'border border-line text-ink hover:border-ink'"
+    :aria-label="`Copy ${label}`"
+    @click="copy"
+  >
+    {{ status === "copied" ? "Copied" : status === "failed" ? "Select and copy" : "Copy" }}
+    <span class="sr-only" aria-live="polite">{{ status === "copied" ? `${label} copied` : "" }}</span>
   </button>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 
-const props = defineProps<{ text: string }>();
-const copied = ref(false);
+const props = defineProps<{ text: string; label: string; onBand?: boolean }>();
+const status = ref<"idle" | "copied" | "failed">("idle");
 
 const copy = async () => {
   try {
     await navigator.clipboard.writeText(props.text);
-    copied.value = true;
-    setTimeout(() => (copied.value = false), 2000);
+    status.value = "copied";
   } catch {
-    window.location.href = `mailto:${props.text}`;
+    status.value = "failed";
   }
+  setTimeout(() => (status.value = "idle"), 2500);
 };
 </script>

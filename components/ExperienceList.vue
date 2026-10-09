@@ -1,7 +1,7 @@
 <template>
   <PageSection id="experience" kicker="2019 – 2026" title="Experience" sunken>
     <template #aside>
-      <NuxtLink to="/resume" class="link text-[15px] font-medium">Full resume →</NuxtLink>
+      <NuxtLink to="/resume" class="link text-[15px] font-medium">Full resume<span aria-hidden="true"> →</span></NuxtLink>
     </template>
 
     <ol class="grid gap-px overflow-hidden rounded-2xl border border-line bg-line">
@@ -22,7 +22,7 @@
 
     <div class="mt-16">
       <h3 class="font-display text-2xl font-bold tracking-[-0.02em]">Skills</h3>
-      <dl class="mt-6 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+      <dl class="mt-6 grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-10 lg:grid-cols-4">
         <div v-for="group in skills" :key="group.group">
           <dt class="label">{{ group.group }}</dt>
           <dd class="mt-2.5">

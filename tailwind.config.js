@@ -2,7 +2,6 @@
 const token = (name) => `rgb(var(--${name}) / <alpha-value>)`;
 
 module.exports = {
-  content: ["./data/**/*.ts"],
   darkMode: "class",
   theme: {
     extend: {
@@ -15,6 +14,8 @@ module.exports = {
         line: token("line"),
         accent: token("accent"),
         "on-accent": token("on-accent"),
+        band: token("band"),
+        "on-band": token("on-band"),
         ok: token("ok"),
       },
       fontFamily: {

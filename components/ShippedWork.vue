@@ -8,19 +8,19 @@
         </div>
         <p class="mt-1 text-muted">{{ item.tagline }} · {{ item.role }}</p>
 
-        <p class="mt-5">{{ item.summary }}</p>
-
-        <dl class="mt-7 flex flex-wrap gap-x-10 gap-y-5">
+        <dl class="mt-6 flex flex-wrap gap-x-10 gap-y-5">
           <div v-for="n in item.numbers" :key="n.label" class="flex flex-col-reverse">
             <dt class="text-sm text-muted">{{ n.label }}</dt>
             <dd class="font-display text-4xl font-bold tracking-[-0.03em] tabular">{{ n.value }}</dd>
           </div>
         </dl>
 
+        <p class="mt-6">{{ item.summary }}</p>
+
         <p class="mt-7 font-mono text-xs leading-6 text-muted">{{ item.stack.join(" · ") }}</p>
-        <a :href="item.url" target="_blank" rel="noopener" class="link mt-3 inline-block font-mono text-sm">
-          {{ item.url.replace("https://", "") }} ↗
-        </a>
+        <ExternalLink :href="item.url" class="link mt-3 inline-block font-mono text-sm">
+          {{ item.url.replace("https://", "") }}
+        </ExternalLink>
       </article>
     </div>
   </PageSection>

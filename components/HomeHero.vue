@@ -1,6 +1,10 @@
 <template>
   <section id="top" class="container-site pb-4 pt-14 sm:pt-20">
-    <p class="label">{{ profile.title }} · 7+ years · {{ profile.location }}</p>
+    <p class="label flex flex-wrap gap-x-2">
+      <span class="whitespace-nowrap">{{ profile.focus }} ·</span>
+      <span class="whitespace-nowrap">{{ profile.years }} years ·</span>
+      <span class="whitespace-nowrap">{{ profile.location }}</span>
+    </p>
 
     <h1 class="font-display mt-6 max-w-[15ch] text-[2.6rem] font-bold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-[5.25rem]">
       Backend engineer, now building
@@ -15,7 +19,7 @@
         <div class="mt-8 flex flex-wrap gap-3">
           <a :href="`mailto:${profile.email}`" class="btn-primary">Email me</a>
           <NuxtLink to="/resume" class="btn-ghost">Resume</NuxtLink>
-          <a href="https://github.com/mdashikar" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
+          <ExternalLink :href="github.href" class="btn-ghost">GitHub</ExternalLink>
         </div>
       </div>
 
@@ -28,13 +32,13 @@
           Available now
         </p>
         <p class="mt-2 text-[15px] text-muted">
-          Senior and lead backend roles, remote or on-site. {{ profile.relocation }}
+          Senior and lead backend roles. {{ profile.relocation }}
         </p>
         <div class="mt-5 border-t border-line pt-5">
           <p class="label">Email</p>
           <div class="mt-1.5 flex items-center justify-between gap-3">
             <span class="min-w-0 select-all break-all font-medium">{{ profile.email }}</span>
-            <CopyButton :text="profile.email" />
+            <CopyButton :text="profile.email" label="email address" />
           </div>
         </div>
       </aside>
@@ -44,4 +48,6 @@
 
 <script setup lang="ts">
 import { building, profile } from "~/data/profile";
+
+const github = profile.links.find((link) => link.label === "GitHub")!;
 </script>

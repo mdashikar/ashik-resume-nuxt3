@@ -2,7 +2,8 @@
   <button
     type="button"
     class="grid h-9 w-9 place-items-center rounded-lg border border-line text-muted transition-colors hover:text-ink"
-    aria-label="Toggle dark mode"
+    aria-label="Dark mode"
+    :aria-pressed="dark"
     @click="toggle"
   >
     <!-- Both icons are rendered; CSS picks one so SSR and client markup always match -->
@@ -17,10 +18,16 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
+
+// The theme is applied by an inline script before hydration, so read it once mounted
+const dark = ref(false);
+onMounted(() => (dark.value = document.documentElement.classList.contains("dark")));
+
 const toggle = () => {
-  const dark = document.documentElement.classList.toggle("dark");
+  dark.value = document.documentElement.classList.toggle("dark");
   try {
-    localStorage.setItem("theme", dark ? "dark" : "light");
+    localStorage.setItem("theme", dark.value ? "dark" : "light");
   } catch {}
 };
 </script>

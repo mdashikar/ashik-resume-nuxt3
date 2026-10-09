@@ -6,22 +6,27 @@ export default defineNuxtConfig({
     "nuxt-microsoft-clarity",
   ],
   tailwindcss: {
-    exposeConfig: true,
+    // Our stylesheet already holds the @tailwind directives; without this the module injects a second copy
+    cssPath: "~/assets/css/main.css",
   },
-  css: ["~/assets/css/main.css"],
-  nitro: {
-    preset: "cloudflare-pages",
-    prerender: {
-      routes: ["/", "/resume"],
-    },
+  prerender: {
+    routes: ["/", "/resume"],
   },
-  routeRules: {
-    // Older resume links that are still shared around
-    "/files/Ashiqur-Rahman-Resume.pdf": {
-      redirect: { to: "/files/Md_Ashiqur_Rahman_Resume_2026.pdf", statusCode: 301 },
-    },
-    "/files/Resume_Md_Ashiqur_Rahman_Backend_2025.pdf": {
-      redirect: { to: "/files/Md_Ashiqur_Rahman_Resume_2026.pdf", statusCode: 301 },
+  hooks: {
+    // Nitro options that Nuxt's config types don't describe yet
+    "nitro:config"(config) {
+      // Fully static output, whether Cloudflare runs `nuxt build` or `nuxt generate`
+      Object.assign(config, { preset: "cloudflare-pages-static" });
+
+      // Write /resume.html rather than /resume/index.html so Cloudflare serves /resume without a redirect
+      Object.assign((config.prerender ??= {}), { autoSubfolderIndex: false });
+
+      // Older resume links that are still shared around (Nitro 2 reads `statusCode`)
+      const resume = { to: "/files/Md_Ashiqur_Rahman_Resume_2026.pdf", statusCode: 301 };
+      Object.assign((config.routeRules ??= {}), {
+        "/files/Ashiqur-Rahman-Resume.pdf": { redirect: resume },
+        "/files/Resume_Md_Ashiqur_Rahman_Backend_2025.pdf": { redirect: resume },
+      });
     },
   },
   cloudflareAnalytics: {
@@ -42,7 +47,7 @@ export default defineNuxtConfig({
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Instrument+Sans:wght@400..600&family=IBM+Plex+Mono:wght@400&display=swap",
         },
       ],
       script: [

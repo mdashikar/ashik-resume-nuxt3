@@ -22,6 +22,8 @@
     --line: 226 226 220;
     --accent: 255 210 63;
     --on-accent: 27 28 25;
+    --band: 27 28 25;
+    --on-band: 252 252 250;
     --ok: 22 128 61;
     color-scheme: light;
   }
@@ -35,6 +37,8 @@
     --line: 50 51 46;
     --accent: 245 200 59;
     --on-accent: 27 28 25;
+    --band: 30 31 28;
+    --on-band: 236 235 230;
     --ok: 74 222 128;
     color-scheme: dark;
   }
@@ -145,7 +149,13 @@
     display: none !important;
   }
 
+  html,
+  body {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
   @page {
-    margin: 14mm;
+    margin: 12mm 14mm;
   }
 }

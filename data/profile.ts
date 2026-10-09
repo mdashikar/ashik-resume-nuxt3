@@ -15,6 +15,7 @@ export const profile = {
   email: "md.ashik.ar@gmail.com",
   phone: "+880 1750 358866",
   location: "Sylhet, Bangladesh",
+  years: "7+",
   availability: "Available now for senior and lead backend roles.",
   relocation: "Open to relocation. EU work sponsorship welcome.",
   intro:
@@ -85,7 +86,7 @@ export const shipped: Shipped[] = [
     year: "2024",
     role: "Sole backend engineer",
     summary:
-      "GDPR and ePrivacy consent banners and records. I designed the API, data model and compliance workflows, the BullMQ job processing, and the AWS infrastructure on ECS with Terraform.",
+      "GDPR and ePrivacy consent management. I designed the API, data model and compliance workflows, the BullMQ job processing, and the AWS infrastructure on ECS with Terraform.",
     numbers: [
       { value: "600+", label: "licenses sold on AppSumo" },
       { value: "920+", label: "clients" },
@@ -130,9 +131,9 @@ export const experience: Role[] = [
     headline: "Led the backend team and ran Dorik's AWS infrastructure for 100k+ users.",
     points: [
       "Built Postmonk.co alone, from architecture to deployment, with five social platform integrations and BullMQ/Redis scheduling.",
-      "Led the backend team of 4+ engineers, covering hiring, mentoring, planning and performance reviews.",
+      "Led the backend team of 4+ engineers, covering hiring, mentoring, planning and performance oversight.",
       "Deployed and operated all Dorik services on AWS ECS, EC2 and Lambda for 100k+ users.",
-      "Provisioned and scaled infrastructure with Terraform and kept CI/CD and uptime at 99.9%+.",
+      "Provisioned and scaled infrastructure with Terraform, ran CI/CD, and kept uptime above 99.9%.",
       "Set engineering standards for code review, architecture decisions and cross-team alignment.",
     ],
     stack: ["Node.js", "Express", "MongoDB", "GraphQL", "BullMQ", "RabbitMQ", "Redis", "Terraform", "AWS", "Docker"],
@@ -146,7 +147,7 @@ export const experience: Role[] = [
     headline: "Architected Consently and owned its whole backend.",
     points: [
       "Architected and delivered Consently.net and owned its whole backend: API design, data model, GDPR and ePrivacy workflows, and infrastructure.",
-      "Consently serves 920+ clients on 894 domains, handling 672K+ consents a month across 11M+ pageviews at 99.99% uptime.",
+      "Consently serves 920+ clients on 894 domains, handling 672K+ consents and 11M+ pageviews a month at 99.99% uptime.",
       "Built high-performance compliance systems whose patterns the rest of the team adopted.",
       "Reviewed code and mentored junior and mid-level engineers.",
     ],
@@ -205,7 +206,7 @@ export const skills = [
   },
   {
     group: "Frontend",
-    items: ["JavaScript", "TypeScript", "Vue", "Nuxt", "React", "Next.js", "SolidJS", "Pinia, Vuex, Redux"],
+    items: ["JavaScript", "TypeScript", "Vue", "Nuxt", "React", "Next.js", "SolidJS", "Vuetify", "Pinia, Vuex, Redux"],
   },
   {
     group: "Practices",
@@ -220,21 +221,6 @@ export const education = {
   years: "2014 – 2018",
   coursework: "Data Structures & Algorithms, OOP, Computer Architecture, Operating Systems, AI, Networking",
 };
-
-export const testimonials = [
-  {
-    name: "Farid Chowdhury",
-    role: "Software Engineer, Technovative Solutions (TVS)",
-    quote:
-      "I've had the joy of working with Ashik, who is the Frontend Team Lead, ensuring that our technologies and website were doing what we needed them to do. He is wonderful at leading and teaching other technical skills while being a supportive and caring colleague. I'm glad to have worked closely with Ashik and delighted that we still co-work and collaborate with each other.",
-  },
-  {
-    name: "Jaber Ahmed",
-    role: "Senior Full Stack Developer, Worktech Labs",
-    quote:
-      "Ashik is an amazing guy to work with. He possesses diverse, stunning tech skills, but what amazed me most is his continuous strive to learn more. In vacancy announcements we often see that an 'anything can do' attitude is required. IMO, he is the perfect example of such a talent. In the office he is at his best as a great professional, while outside the office you might find him a great friend.",
-  },
-];
 
 export const navLinks = [
   { label: "Now", href: "/#now" },

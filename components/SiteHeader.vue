@@ -15,12 +15,14 @@
         <ThemeToggle />
         <NuxtLink to="/resume" class="btn-primary hidden !py-2 sm:inline-flex">Resume</NuxtLink>
         <button
+          ref="menuButton"
           type="button"
           class="grid h-9 w-9 place-items-center rounded-lg border border-line md:hidden"
           :aria-expanded="open"
           aria-controls="mobile-nav"
-          aria-label="Toggle menu"
+          aria-label="Menu"
           @click="open = !open"
+          @keydown.esc="open = false"
         >
           <svg v-if="!open" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <path d="M4 7h16M4 12h16M4 17h16" />
@@ -32,7 +34,7 @@
       </div>
     </div>
 
-    <nav v-show="open" id="mobile-nav" class="border-t border-line md:hidden" aria-label="Mobile">
+    <nav v-show="open" id="mobile-nav" class="border-t border-line md:hidden" aria-label="Mobile" @keydown.esc="closeMenu">
       <div class="container-site flex flex-col divide-y divide-line">
         <NuxtLink
           v-for="link in [...navLinks, { label: 'Resume', href: '/resume' }]"
@@ -53,4 +55,10 @@ import { ref } from "vue";
 import { navLinks } from "~/data/profile";
 
 const open = ref(false);
+const menuButton = ref<HTMLButtonElement | null>(null);
+
+const closeMenu = () => {
+  open.value = false;
+  menuButton.value?.focus();
+};
 </script>

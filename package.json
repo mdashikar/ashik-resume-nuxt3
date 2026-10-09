@@ -5,19 +5,19 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "cf-preview": "npx wrangler pages dev dist --port=8788"
+    "cf-preview": "npx wrangler pages dev dist --port=8788",
+    "typecheck": "nuxt typecheck"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20230821.0",
-    "@vueuse/core": "^9.2.0",
-    "@vueuse/nuxt": "^9.2.0",
     "nuxt": "^3.21.11",
-    "vue-gtag-next": "^1.14.0"
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.12",
+    "wrangler": "^4.23.0"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
     "nuxt-cloudflare-analytics": "^1.0.8",
     "nuxt-microsoft-clarity": "^0.1.0",
-    "wrangler": "^4.23.0"
+    "vue-gtag-next": "^1.14.0"
   }
 }
