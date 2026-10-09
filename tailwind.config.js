@@ -9,18 +9,20 @@ module.exports = {
       colors: {
         paper: token("bg"),
         surface: token("surface"),
+        sunken: token("sunken"),
         ink: token("ink"),
         muted: token("muted"),
         line: token("line"),
         accent: token("accent"),
+        "on-accent": token("on-accent"),
         ok: token("ok"),
       },
       fontFamily: {
-        sans: ["Archivo", "ui-sans-serif", "system-ui", "sans-serif"],
-        mono: ['"Martian Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        sans: ['"Instrument Sans"', "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ['"IBM Plex Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       maxWidth: {
-        site: "76rem",
+        site: "72rem",
       },
     },
   },

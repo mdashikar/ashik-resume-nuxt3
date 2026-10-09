@@ -1,9 +1,9 @@
 <template>
   <div>
     <HomeHero />
-    <FeaturedWork />
+    <NowBuilding />
+    <ShippedWork />
     <ExperienceList />
-    <SkillsGrid />
     <Testimonial />
     <Contact />
   </div>
@@ -11,9 +11,9 @@
 
 <script setup lang="ts">
 usePageSeo({
-  title: "Md Ashiqur Rahman — Full-Stack Engineer, Backend & Cloud Infrastructure",
+  title: "Md Ashiqur Rahman — Backend Engineer, building Feevox and Erestro",
   description:
-    "Lead Software Engineer at Dorik with 7+ years building scalable Node.js backends and AWS infrastructure. Architect of Consently.net and Postmonk.co. Open to relocation.",
+    "Full-stack engineer with 7+ years on Node.js backends and AWS infrastructure. Former backend lead at Dorik (Consently, Postmonk), now building Feevox and Erestro. Available for senior and lead backend roles.",
   path: "/",
 });
 </script>

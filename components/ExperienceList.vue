@@ -1,39 +1,41 @@
 <template>
-  <PageSection id="experience" title="Experience" meta="2019 – present">
-    <ol class="divide-y divide-line border-y border-line">
+  <PageSection id="experience" kicker="2019 – 2026" title="Experience" sunken>
+    <template #aside>
+      <NuxtLink to="/resume" class="link text-[15px] font-medium">Full resume →</NuxtLink>
+    </template>
+
+    <ol class="grid gap-px overflow-hidden rounded-2xl border border-line bg-line">
       <li
         v-for="role in experience"
         :key="role.title + role.start"
-        class="grid gap-x-8 gap-y-2 py-8 lg:grid-cols-[9.5rem_minmax(0,1fr)]"
+        class="grid gap-x-8 gap-y-1 bg-surface px-5 py-5 sm:px-7 md:grid-cols-[11rem_minmax(0,1fr)]"
       >
-        <p class="label tabular pt-1">
-          {{ role.start }} – {{ role.end }}
-          <span class="mt-1 block normal-case tracking-normal">{{ role.location }}</span>
-        </p>
+        <p class="font-mono text-sm text-muted tabular md:pt-0.5">{{ role.start }} – {{ role.end }}</p>
         <div class="min-w-0">
-          <h3 class="text-xl font-semibold tracking-tight">
-            {{ role.title }}<span class="font-normal text-muted">, {{ role.company }}</span>
+          <h3 class="font-semibold">
+            {{ role.title }} <span class="font-normal text-muted">· {{ role.company }}</span>
           </h3>
-          <ul class="mt-3 max-w-[66ch] space-y-1.5 text-muted">
-            <li v-for="point in role.points" :key="point" class="flex gap-3">
-              <span class="mt-[0.7em] h-px w-3 flex-none bg-line" aria-hidden="true" />
-              <span>{{ point }}</span>
-            </li>
-          </ul>
-          <ul v-if="role.stack.length" class="mt-4 flex flex-wrap gap-1.5" aria-label="Technologies">
-            <li v-for="tech in role.stack" :key="tech" class="chip">{{ tech }}</li>
-          </ul>
+          <p class="mt-0.5 text-muted">{{ role.headline }}</p>
         </div>
       </li>
     </ol>
 
-    <div class="mt-8 flex flex-wrap gap-3">
-      <NuxtLink to="/resume" class="btn-ghost">Read the full resume</NuxtLink>
-      <a :href="site.resumePdf" download class="btn-ghost">Download PDF</a>
+    <div class="mt-16">
+      <h3 class="font-display text-2xl font-bold tracking-[-0.02em]">Skills</h3>
+      <dl class="mt-6 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div v-for="group in skills" :key="group.group">
+          <dt class="label">{{ group.group }}</dt>
+          <dd class="mt-2.5">
+            <ul class="space-y-1">
+              <li v-for="item in group.items" :key="item">{{ item }}</li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
     </div>
   </PageSection>
 </template>
 
 <script setup lang="ts">
-import { experience, site } from "~/data/profile";
+import { experience, skills } from "~/data/profile";
 </script>

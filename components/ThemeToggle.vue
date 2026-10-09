@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="grid h-9 w-9 place-items-center rounded-md border border-line text-muted transition-colors hover:text-ink"
+    class="grid h-9 w-9 place-items-center rounded-lg border border-line text-muted transition-colors hover:text-ink"
     aria-label="Toggle dark mode"
     @click="toggle"
   >

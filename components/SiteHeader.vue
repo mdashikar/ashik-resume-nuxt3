@@ -1,8 +1,8 @@
 <template>
   <header class="no-print sticky top-0 z-40 border-b border-line bg-paper/85 backdrop-blur-md">
-    <div class="container-site flex h-14 items-center justify-between gap-6">
-      <NuxtLink to="/" class="font-mono text-[13px] font-medium" @click="open = false">
-        ashik<span class="text-accent">.dev</span>
+    <div class="container-site flex h-16 items-center justify-between gap-6">
+      <NuxtLink to="/" class="font-display text-lg font-bold tracking-[-0.02em]" @click="open = false">
+        Md Ashiqur Rahman
       </NuxtLink>
 
       <nav class="hidden items-center gap-7 text-[15px] text-muted md:flex" aria-label="Primary">
@@ -13,10 +13,10 @@
 
       <div class="flex items-center gap-2">
         <ThemeToggle />
-        <NuxtLink to="/resume" class="btn-primary hidden !py-1.5 sm:inline-flex">Resume</NuxtLink>
+        <NuxtLink to="/resume" class="btn-primary hidden !py-2 sm:inline-flex">Resume</NuxtLink>
         <button
           type="button"
-          class="grid h-9 w-9 place-items-center rounded-md border border-line md:hidden"
+          class="grid h-9 w-9 place-items-center rounded-lg border border-line md:hidden"
           :aria-expanded="open"
           aria-controls="mobile-nav"
           aria-label="Toggle menu"

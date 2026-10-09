@@ -23,8 +23,8 @@ export const usePageSeo = (opts: { title: string; description: string; path: str
     twitterDescription: opts.description,
     twitterImage: site.ogImage,
     themeColor: [
-      { content: "#f0f3f6", media: "(prefers-color-scheme: light)" },
-      { content: "#0a101c", media: "(prefers-color-scheme: dark)" },
+      { content: "#fcfcfa", media: "(prefers-color-scheme: light)" },
+      { content: "#141513", media: "(prefers-color-scheme: dark)" },
     ],
   });
 
@@ -40,8 +40,7 @@ export const usePageSeo = (opts: { title: string; description: string; path: str
           alternateName: profile.shortName,
           url: site.url,
           image: site.ogImage,
-          jobTitle: profile.currentRole,
-          worksFor: { "@type": "Organization", name: profile.currentCompany, url: "https://dorik.com" },
+          jobTitle: profile.title,
           email: `mailto:${profile.email}`,
           address: { "@type": "PostalAddress", addressLocality: "Sylhet", addressCountry: "BD" },
           alumniOf: { "@type": "CollegeOrUniversity", name: "Leading University" },

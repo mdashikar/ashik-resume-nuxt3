@@ -1,51 +1,47 @@
 <template>
-  <section id="top" class="container-site pb-16 pt-12 sm:pt-16 lg:pb-24 lg:pt-20">
-    <p class="label flex flex-wrap items-center gap-x-2 gap-y-1">
-      <span class="inline-flex items-center gap-2">
-        <span class="h-1.5 w-1.5 rounded-full bg-ok" aria-hidden="true" />
-        {{ profile.currentRole }} at {{ profile.currentCompany }}
-      </span>
-      <span aria-hidden="true">·</span>
-      <span>{{ profile.location }}</span>
-    </p>
+  <section id="top" class="container-site pb-4 pt-14 sm:pt-20">
+    <p class="label">{{ profile.title }} · 7+ years · {{ profile.location }}</p>
 
-    <h1 class="font-display mt-5 text-[2.6rem] font-bold leading-[0.95] tracking-[-0.035em] sm:text-6xl lg:text-[5.4rem]">
-      {{ profile.name }}
+    <h1 class="font-display mt-6 max-w-[15ch] text-[2.6rem] font-bold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-[5.25rem]">
+      Backend engineer, now building
+      <template v-for="(product, i) in building" :key="product.name">
+        <span class="mark">{{ product.name }}</span>{{ i === building.length - 1 ? "." : " and " }}
+      </template>
     </h1>
 
-    <div class="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-16">
+    <div class="mt-12 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_23rem] lg:gap-20">
       <div class="min-w-0">
-        <p class="max-w-[34ch] text-xl leading-snug sm:text-2xl">
-          {{ profile.intro }}
-        </p>
+        <p class="max-w-[56ch] text-lg leading-relaxed sm:text-xl">{{ profile.intro }}</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a :href="`mailto:${profile.email}`" class="btn-primary">Email me</a>
-          <a :href="site.resumePdf" download class="btn-ghost">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14" /></svg>
-            Resume (PDF)
-          </a>
+          <NuxtLink to="/resume" class="btn-ghost">Resume</NuxtLink>
           <a href="https://github.com/mdashikar" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
         </div>
       </div>
 
-      <dl class="grid content-start gap-px self-start border border-line bg-line text-[15px]">
-        <div v-for="fact in facts" :key="fact.label" class="grid grid-cols-[6.5rem_1fr] gap-3 bg-paper px-4 py-2.5">
-          <dt class="label pt-[3px]">{{ fact.label }}</dt>
-          <dd>{{ fact.value }}</dd>
+      <aside class="rounded-2xl border border-line bg-surface p-6" aria-label="Availability">
+        <p class="flex items-center gap-2.5 font-semibold">
+          <span class="relative flex h-2.5 w-2.5" aria-hidden="true">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-ok opacity-50" />
+            <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-ok" />
+          </span>
+          Available now
+        </p>
+        <p class="mt-2 text-[15px] text-muted">
+          Senior and lead backend roles, remote or on-site. {{ profile.relocation }}
+        </p>
+        <div class="mt-5 border-t border-line pt-5">
+          <p class="label">Email</p>
+          <div class="mt-1.5 flex items-center justify-between gap-3">
+            <span class="min-w-0 select-all break-all font-medium">{{ profile.email }}</span>
+            <CopyButton :text="profile.email" />
+          </div>
         </div>
-        <div class="grid grid-cols-[6.5rem_1fr] gap-3 bg-paper px-4 py-2.5">
-          <dt class="label pt-[3px]">Location</dt>
-          <dd>{{ profile.availability }}</dd>
-        </div>
-      </dl>
-    </div>
-
-    <div class="mt-12 lg:mt-16">
-      <SystemDiagram />
+      </aside>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { facts, profile, site } from "~/data/profile";
+import { building, profile } from "~/data/profile";
 </script>

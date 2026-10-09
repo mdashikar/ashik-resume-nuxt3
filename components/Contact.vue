@@ -1,39 +1,46 @@
 <template>
-  <PageSection id="contact" title="Contact">
-    <p class="max-w-[52ch] text-xl leading-snug">
-      I'm looking for senior and lead backend roles, remote or on-site. I'm happy to relocate, and EU work sponsorship
-      is welcome.
-    </p>
+  <section id="contact" class="bg-ink text-paper">
+    <div class="container-site py-20 sm:py-28">
+      <p class="label !text-paper/60">Contact</p>
+      <h2 class="font-display mt-3 max-w-[18ch] text-4xl font-bold tracking-[-0.035em] sm:text-6xl">
+        Hiring for a senior or lead backend role?
+      </h2>
+      <p class="mt-5 max-w-[52ch] text-lg text-paper/70">
+        I'm available now, remote or on-site. {{ profile.relocation }} I also like hearing from people using Feevox
+        or Erestro.
+      </p>
 
-    <div class="mt-10 border-y border-line py-8">
-      <p class="label">Email</p>
-      <div class="mt-3 flex flex-wrap items-center gap-x-6 gap-y-4">
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
         <a
           :href="`mailto:${profile.email}`"
-          class="font-display break-all text-2xl font-bold tracking-[-0.02em] transition-colors hover:text-accent sm:text-4xl"
+          class="font-display break-all text-2xl font-bold tracking-[-0.02em] underline decoration-accent decoration-[3px] underline-offset-[6px] sm:text-4xl"
         >
           {{ profile.email }}
         </a>
-        <button type="button" class="btn-ghost !py-2" @click="copyEmail">
+        <button
+          type="button"
+          class="btn border border-paper/25 !py-2 text-paper hover:border-paper"
+          @click="copyEmail"
+        >
           {{ copied ? "Copied" : "Copy address" }}
         </button>
       </div>
-    </div>
 
-    <dl class="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">
-      <div v-for="link in profile.links" :key="link.label" class="min-w-0">
-        <dt class="label">{{ link.label }}</dt>
-        <dd class="mt-1 truncate">
-          <a :href="link.href" target="_blank" rel="noopener" class="link">{{ link.handle }}</a>
-        </dd>
-      </div>
-    </dl>
-  </PageSection>
+      <ul class="mt-14 flex flex-wrap gap-x-8 gap-y-3 border-t border-paper/15 pt-8 text-[15px] text-paper/70">
+        <li v-for="link in profile.links" :key="link.label">
+          <a :href="link.href" target="_blank" rel="noopener" class="transition-colors hover:text-paper">{{ link.label }} ↗</a>
+        </li>
+        <li>
+          <a :href="site.resumePdf" download class="transition-colors hover:text-paper">Resume PDF ↓</a>
+        </li>
+      </ul>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { profile } from "~/data/profile";
+import { profile, site } from "~/data/profile";
 
 const copied = ref(false);
 
