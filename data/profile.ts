@@ -18,9 +18,9 @@ export const profile = {
   availability: "Available now for senior and lead backend roles.",
   relocation: "Open to relocation. EU work sponsorship welcome.",
   intro:
-    "I'm a full-stack engineer with 7+ years of experience, most of it on the backend. At Dorik I led the backend team, ran the AWS infrastructure behind products used by 100k+ people, and shipped Consently and Postmonk. Now I'm building two products of my own.",
+    "I'm a full-stack engineer with 7+ years of experience, most of it on the backend. At Dorik I led the backend team, ran the AWS infrastructure behind products used by 100k+ people, and shipped Consently and Postmonk. Now I'm building Feevox on my own and Erestro as a co-founder.",
   summary:
-    "Full-stack engineer with 7+ years of experience building backend systems and leading engineering teams. At Dorik I led the backend team, ran the AWS infrastructure behind products used by 100k+ people, and shipped Consently.net (600+ lifetime licenses sold) and Postmonk.co (built solo). I'm now building Feevox and Erestro, and I'm open to senior and lead backend roles.",
+    "Full-stack engineer with 7+ years of experience building backend systems and leading engineering teams. At Dorik I led the backend team, ran the AWS infrastructure behind products used by 100k+ people, and shipped Consently.net (600+ lifetime licenses sold) and Postmonk.co (built solo). I'm now building Feevox and co-founding Erestro, and I'm open to senior and lead backend roles.",
   links: [
     { label: "GitHub", handle: "github.com/mdashikar", href: "https://github.com/mdashikar" },
     { label: "LinkedIn", handle: "linkedin.com/in/mdashikar", href: "https://www.linkedin.com/in/mdashikar" },
@@ -59,7 +59,7 @@ export const building: Product[] = [
     url: "https://erestro.co.uk",
     summary: "Online ordering for restaurants.",
     audience: "For UK restaurants and takeaways that want to take orders through their own website.",
-    role: "Founder and sole engineer",
+    role: "Co-founder",
     features: ["Online ordering", "Restaurant websites"],
     stack: [],
   },
