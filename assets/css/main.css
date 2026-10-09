@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Layout: a "now" page. What I'm building and whether I'm available come first,
+  past work follows in shorter form, and the full record lives on /resume.
+  Wide left-aligned column, generous space, cards only for the two live products.
+
+  Color: graphite ink on clean white, highlighter yellow reserved for what is
+  current (the products I'm building, my availability). Green only for "available".
+  Type: Bricolage Grotesque for display, Instrument Sans for reading,
+  IBM Plex Mono for dates, labels and figures.
+*/
+@layer base {
+  :root {
+    --bg: 252 252 250;
+    --surface: 255 255 255;
+    --sunken: 243 243 239;
+    --ink: 27 28 25;
+    --muted: 97 98 91;
+    --line: 226 226 220;
+    --accent: 255 210 63;
+    --on-accent: 27 28 25;
+    --band: 27 28 25;
+    --on-band: 252 252 250;
+    --ok: 22 128 61;
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: 20 21 19;
+    --surface: 30 31 28;
+    --sunken: 27 28 25;
+    --ink: 236 235 230;
+    --muted: 163 163 155;
+    --line: 50 51 46;
+    --accent: 245 200 59;
+    --on-accent: 27 28 25;
+    --band: 30 31 28;
+    --on-band: 236 235 230;
+    --ok: 74 222 128;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper font-sans text-[17px] leading-relaxed text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    @apply bg-accent text-on-accent;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ink ring-offset-2 ring-offset-paper;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-10;
+  }
+
+  .font-display {
+    font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .label {
+    @apply font-mono text-xs uppercase tracking-[0.06em] text-muted;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Highlighter: only for things that are current */
+  .mark {
+    @apply rounded-[0.12em] bg-accent px-[0.12em] text-on-accent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-md bg-sunken px-2 py-0.5 text-sm text-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-[15px] font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-paper hover:bg-ink/85;
+  }
+
+  .btn-ghost {
+    @apply btn border border-line text-ink hover:border-ink;
+  }
+
+  .link {
+    @apply underline decoration-accent decoration-2 underline-offset-[3px] transition-colors hover:decoration-ink;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-bold tracking-[-0.025em] sm:text-4xl;
+  }
+}
+
+@media print {
+  :root,
+  .dark {
+    --bg: 255 255 255;
+    --surface: 255 255 255;
+    --sunken: 255 255 255;
+    --ink: 0 0 0;
+    --muted: 70 70 70;
+    --line: 210 210 210;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  html,
+  body {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  @page {
+    margin: 12mm 14mm;
+  }
+}

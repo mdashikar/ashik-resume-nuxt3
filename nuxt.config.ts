@@ -1,16 +1,31 @@
 export default defineNuxtConfig({
+  compatibilityDate: "2026-10-09",
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-cloudflare-analytics",
     "nuxt-microsoft-clarity",
   ],
   tailwindcss: {
-    exposeConfig: true,
+    // Our stylesheet already holds the @tailwind directives; without this the module injects a second copy
+    cssPath: "~/assets/css/main.css",
   },
-  nitro: {
-    preset: "cloudflare-pages",
+  prerender: {
+    routes: ["/", "/resume"],
   },
-  ssr: false,
+  hooks: {
+    // Nitro options that Nuxt's config types don't describe yet
+    "nitro:config"(config) {
+      // Write /resume.html rather than /resume/index.html, so hosts serve /resume without a trailing-slash redirect
+      Object.assign((config.prerender ??= {}), { autoSubfolderIndex: false });
+
+      // Older resume links that are still shared around (Nitro 2 reads `statusCode`)
+      const resume = { to: "/files/Md_Ashiqur_Rahman_Resume_2026.pdf", statusCode: 301 };
+      Object.assign((config.routeRules ??= {}), {
+        "/files/Ashiqur-Rahman-Resume.pdf": { redirect: resume },
+        "/files/Resume_Md_Ashiqur_Rahman_Backend_2025.pdf": { redirect: resume },
+      });
+    },
+  },
   cloudflareAnalytics: {
     token: "7dcb1956090c4f469b5770c335a0cd50",
   },
@@ -19,7 +34,25 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: { lang: "en" },
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+        { rel: "manifest", href: "/site.webmanifest" },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Instrument+Sans:wght@400..600&family=IBM+Plex+Mono:wght@400&display=swap",
+        },
+      ],
       script: [
+        {
+          // Apply the saved / system theme before first paint to avoid a flash
+          innerHTML: `(function(){try{var t=localStorage.getItem("theme");var d=t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",d)}catch(e){}})()`,
+          tagPosition: "head",
+        },
         {
           id: "reb2b",
           innerHTML: `!function () {

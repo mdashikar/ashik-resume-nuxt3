@@ -1,27 +1,36 @@
 <template>
-  <!-- Section 1 -->
-  <section class="h-auto bg-grey-100" id="contact">
-    <div
-      class="max-w-7xl mx-auto py-16 px-10 sm:py-24 sm:px-6 lg:px-8 sm:text-center"
-    >
-      <p
-        class="mt-1 text-3xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-4xl"
-      >
-        Interested in collaborating with me?
+  <section id="contact" class="bg-band text-on-band">
+    <div class="container-site py-20 sm:py-28">
+      <p class="label !text-on-band/70">Contact</p>
+      <h2 class="font-display mt-3 max-w-[18ch] text-4xl font-bold tracking-[-0.035em] sm:text-6xl">
+        Hiring for a senior or lead backend role?
+      </h2>
+      <p class="mt-5 max-w-[52ch] text-lg text-on-band/75">
+        I'm available now. {{ profile.relocation }} I also like hearing from people using Feevox or Erestro.
       </p>
-      <p class="max-w-3xl mt-5 mx-auto text-xl text-gray-500">
-        I’m always open to discussing product or partnership opportunities.
-      </p>
-      <div class="flex justify-center mt-8 space-x-3">
+
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
         <a
-          href="mailto:md.ashik.ar@gmail.com"
-          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200"
-          data-primary="indigo-600"
-          data-rounded="rounded-md"
-          data-primary-reset="{}"
-          >Start a conversation</a
+          :href="`mailto:${profile.email}`"
+          class="font-display break-all text-2xl font-bold tracking-[-0.02em] underline decoration-accent decoration-[3px] underline-offset-[6px] sm:text-4xl"
         >
+          {{ profile.email }}
+        </a>
+        <CopyButton :text="profile.email" label="email address" on-band />
       </div>
+
+      <ul class="mt-14 flex flex-wrap gap-x-8 gap-y-3 border-t border-on-band/15 pt-8 text-[15px] text-on-band/75">
+        <li v-for="link in profile.links" :key="link.label">
+          <ExternalLink :href="link.href" class="transition-colors hover:text-on-band">{{ link.label }}</ExternalLink>
+        </li>
+        <li>
+          <a :href="site.resumePdf" download class="transition-colors hover:text-on-band">Resume PDF</a>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { profile, site } from "~/data/profile";
+</script>
