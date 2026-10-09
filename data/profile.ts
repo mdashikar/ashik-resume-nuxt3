@@ -59,7 +59,7 @@ export const building: Product[] = [
     url: "https://erestro.co.uk",
     summary: "Online ordering for restaurants.",
     audience: "For UK restaurants and takeaways that want to take orders through their own website.",
-    role: "Co-founder",
+    role: "Co-founder and Full-stack Engineer",
     features: ["Online ordering", "Restaurant websites"],
     stack: [],
   },
