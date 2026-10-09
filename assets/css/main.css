@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: 247 246 242;
+    --surface: 255 255 255;
+    --ink: 20 20 19;
+    --muted: 99 98 92;
+    --line: 226 224 216;
+    --accent: 194 65 12;
+    --ok: 21 128 61;
+    color-scheme: light;
+  }
+
+  .dark {
+    --paper: 12 12 11;
+    --surface: 22 22 20;
+    --ink: 240 239 233;
+    --muted: 160 158 150;
+    --line: 44 43 40;
+    --accent: 251 146 60;
+    --ok: 74 222 128;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    @apply bg-accent text-paper;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-paper;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.14em] text-muted;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-paper hover:bg-accent;
+  }
+
+  .btn-ghost {
+    @apply btn border border-line text-ink hover:border-ink;
+  }
+
+  .link {
+    @apply underline decoration-line decoration-1 underline-offset-4 transition-colors hover:decoration-accent;
+  }
+}
+
+@media print {
+  :root,
+  .dark {
+    --paper: 255 255 255;
+    --surface: 255 255 255;
+    --ink: 0 0 0;
+    --muted: 70 70 70;
+    --line: 210 210 210;
+    --accent: 30 58 138;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  @page {
+    margin: 14mm;
+  }
+}

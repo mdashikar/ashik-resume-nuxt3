@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  compatibilityDate: "2026-10-09",
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-cloudflare-analytics",
@@ -7,10 +8,22 @@ export default defineNuxtConfig({
   tailwindcss: {
     exposeConfig: true,
   },
+  css: ["~/assets/css/main.css"],
   nitro: {
     preset: "cloudflare-pages",
+    prerender: {
+      routes: ["/", "/resume"],
+    },
   },
-  ssr: false,
+  routeRules: {
+    // Older resume links that are still shared around
+    "/files/Ashiqur-Rahman-Resume.pdf": {
+      redirect: { to: "/files/Md_Ashiqur_Rahman_Resume_2026.pdf", statusCode: 301 },
+    },
+    "/files/Resume_Md_Ashiqur_Rahman_Backend_2025.pdf": {
+      redirect: { to: "/files/Md_Ashiqur_Rahman_Resume_2026.pdf", statusCode: 301 },
+    },
+  },
   cloudflareAnalytics: {
     token: "7dcb1956090c4f469b5770c335a0cd50",
   },
@@ -19,7 +32,25 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: { lang: "en" },
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+        { rel: "manifest", href: "/site.webmanifest" },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap",
+        },
+      ],
       script: [
+        {
+          // Apply the saved / system theme before first paint to avoid a flash
+          innerHTML: `(function(){try{var t=localStorage.getItem("theme");var d=t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",d)}catch(e){}})()`,
+          tagPosition: "head",
+        },
         {
           id: "reb2b",
           innerHTML: `!function () {
