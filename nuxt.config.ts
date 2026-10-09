@@ -15,10 +15,7 @@ export default defineNuxtConfig({
   hooks: {
     // Nitro options that Nuxt's config types don't describe yet
     "nitro:config"(config) {
-      // Fully static output, whether Cloudflare runs `nuxt build` or `nuxt generate`
-      Object.assign(config, { preset: "cloudflare-pages-static" });
-
-      // Write /resume.html rather than /resume/index.html so Cloudflare serves /resume without a redirect
+      // Write /resume.html rather than /resume/index.html, so hosts serve /resume without a trailing-slash redirect
       Object.assign((config.prerender ??= {}), { autoSubfolderIndex: false });
 
       // Older resume links that are still shared around (Nitro 2 reads `statusCode`)

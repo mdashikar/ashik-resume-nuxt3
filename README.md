@@ -1,6 +1,6 @@
 # ashik.dev
 
-Personal site and web resume for Md Ashiqur Rahman. Nuxt 3 + Tailwind CSS, prerendered to static HTML and hosted on Cloudflare Pages.
+Personal site and web resume for Md Ashiqur Rahman. Nuxt 3 + Tailwind CSS, prerendered to static HTML and deployed on Vercel.
 
 ## Editing content
 
@@ -35,9 +35,15 @@ npm install
 npm run dev        # http://localhost:3000
 npm run typecheck  # vue-tsc
 npm run generate   # static, prerendered build in dist/
-npm run cf-preview # preview dist/ with Wrangler
+npm run cf-preview # preview dist/ with Wrangler (Cloudflare Pages)
 ```
 
 ## Deploying
 
-Cloudflare Pages: build command `npm run generate` (or `npm run build`, which produces the same static output), output directory `dist`.
+Production deploys come from Vercel's Git integration on pushes to `main` (preview deploys for other branches). Nitro detects the platform at build time, so the same config also works on Cloudflare Pages or any static host:
+
+- Vercel: `npm run build` or `npm run generate`; output goes to `.vercel/output` automatically.
+- Cloudflare Pages: build command `npm run generate`, output directory `dist`.
+- Anywhere else: `npm run generate` and upload `dist/` (a link to `.output/public`).
+
+The build needs Node.js 22 (`engines` in `package.json`).
