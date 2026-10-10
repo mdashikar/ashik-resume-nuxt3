@@ -8,8 +8,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "cf-preview": "npx wrangler pages dev dist --port=8788",
-    "typecheck": "nuxt typecheck"
+    "cf-preview": "nuxt generate --preset cloudflare-pages-static && wrangler pages dev dist --port=8788",
+    "typecheck": "nuxt typecheck",
+    "deploy:cf": "nuxt generate --preset cloudflare-pages-static && wrangler pages deploy dist --project-name ashik-resume-nuxt3"
   },
   "devDependencies": {
     "nuxt": "^3.21.11",

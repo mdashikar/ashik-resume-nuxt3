@@ -12,16 +12,16 @@ export const profile = {
   shortName: "Ashik",
   title: "Full-Stack Engineer",
   focus: "Backend & Cloud Infrastructure",
-  email: "md.ashik.ar@gmail.com",
+  email: "hello@ashik.dev",
   phone: "+880 1750 358866",
   location: "Sylhet, Bangladesh",
   years: "7+",
   availability: "Available now for senior and lead backend roles.",
   relocation: "Open to relocation. EU work sponsorship welcome.",
   intro:
-    "I'm a full-stack engineer with 7+ years of experience, most of it on the backend. At Dorik I led the backend team, ran the AWS infrastructure behind products used by 100k+ people, and shipped Consently and Postmonk. Now I'm building Feevox on my own and Erestro as a co-founder.",
+    "I'm a full-stack engineer with 7+ years of experience, mostly on the backend. At Dorik I led the backend team, ran the company's AWS infrastructure, and built two of its products: Consently, as the sole backend engineer, and Postmonk, as the only engineer. Today I run Feevox, my own product, and co-founded Erestro, where I build the full stack.",
   summary:
-    "Full-stack engineer with 7+ years of experience building backend systems and leading engineering teams. At Dorik I led the backend team, ran the AWS infrastructure behind products used by 100k+ people, and shipped Consently.net (600+ lifetime licenses sold) and Postmonk.co (built solo). I'm now building Feevox and co-founding Erestro, and I'm open to senior and lead backend roles.",
+    "Full-stack engineer with 7+ years of experience building backend systems and leading engineering teams. At Dorik I led the backend team, ran the company's AWS infrastructure, and built two of its products: Consently.net as the sole backend engineer (600+ lifetime licenses sold) and Postmonk.co as the only engineer. I now run Feevox, my own product, and co-founded Erestro, where I build the full stack. I'm open to senior and lead backend roles.",
   links: [
     { label: "GitHub", handle: "github.com/mdashikar", href: "https://github.com/mdashikar" },
     { label: "LinkedIn", handle: "linkedin.com/in/mdashikar", href: "https://www.linkedin.com/in/mdashikar" },
@@ -101,7 +101,7 @@ export const shipped: Shipped[] = [
     year: "2026",
     role: "Sole engineer, full stack",
     summary:
-      "Schedules posts to Facebook, Instagram, X, LinkedIn and YouTube. I built the whole product myself, from architecture to deployment, with queue-based scheduling on BullMQ and Redis.",
+      "Schedules posts to Facebook, Instagram, X, LinkedIn and YouTube. I was the only engineer on it and built the whole product, from architecture to deployment, with queue-based scheduling on BullMQ and Redis.",
     numbers: [
       { value: "5", label: "social platforms" },
       { value: "1", label: "engineer" },
@@ -130,7 +130,7 @@ export const experience: Role[] = [
     end: "Aug 2026",
     headline: "Led the backend team and ran Dorik's AWS infrastructure for 100k+ users.",
     points: [
-      "Built Postmonk.co alone, from architecture to deployment, with five social platform integrations and BullMQ/Redis scheduling.",
+      "Built Postmonk.co for Dorik as the sole engineer, from architecture to deployment, with five social platform integrations and BullMQ/Redis scheduling.",
       "Led the backend team of 4+ engineers, covering hiring, mentoring, planning and performance oversight.",
       "Deployed and operated all Dorik services on AWS ECS, EC2 and Lambda for 100k+ users.",
       "Provisioned and scaled infrastructure with Terraform, ran CI/CD, and kept uptime above 99.9%.",

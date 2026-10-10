@@ -1,6 +1,6 @@
 # ashik.dev
 
-Personal site and web resume for Md Ashiqur Rahman. Nuxt 3 + Tailwind CSS, prerendered to static HTML and deployed on Vercel.
+Personal site and web resume for Md Ashiqur Rahman. Nuxt 3 + Tailwind CSS, prerendered to static HTML and deployed on Cloudflare Pages.
 
 ## Editing content
 
@@ -35,15 +35,32 @@ npm install
 npm run dev        # http://localhost:3000
 npm run typecheck  # vue-tsc
 npm run generate   # static, prerendered build in dist/
-npm run cf-preview # preview dist/ with Wrangler (Cloudflare Pages)
+npm run cf-preview # build for Cloudflare and preview with Wrangler
+npm run deploy:cf  # build for Cloudflare and deploy with Wrangler
 ```
 
 ## Deploying
 
-Production deploys come from Vercel's Git integration on pushes to `main` (preview deploys for other branches). Nitro detects the platform at build time, so the same config also works on Cloudflare Pages or any static host:
+### Cloudflare Pages (Git integration)
 
-- Vercel: `npm run build` or `npm run generate`; output goes to `.vercel/output` automatically.
-- Cloudflare Pages: build command `npm run generate`, output directory `dist`.
-- Anywhere else: `npm run generate` and upload `dist/` (a link to `.output/public`).
+Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git → `mdashikar/ashik-resume-nuxt3`:
 
-The build needs Node.js 22 (`engines` in `package.json`).
+- Production branch: `main`
+- Framework preset: Nuxt.js
+- Build command: `npm run generate`
+- Build output directory: `dist`
+
+Node 22 comes from `.node-version`. Nitro detects the Pages build environment and uses the `cloudflare-pages-static` preset, so `dist/` includes `_redirects` (old PDF URLs) and `_headers`. Every push to `main` deploys to production, and other branches get preview URLs.
+
+### Cloudflare Pages (from your machine)
+
+```bash
+npx wrangler login
+npm run deploy:cf
+```
+
+This deploys to the `ashik-resume-nuxt3` Pages project (created on first deploy).
+
+### Other hosts
+
+Nitro picks the preset for the platform it builds on, so the same config also works on Vercel (`.vercel/output`) or any static host (`npm run generate`, upload `dist/`). The build needs Node.js 22 (`engines` in `package.json`, `.node-version`).
