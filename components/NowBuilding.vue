@@ -2,6 +2,15 @@
   <PageSection id="now" kicker="Now" title="What I'm building">
     <div class="grid items-start gap-5 md:grid-cols-2">
       <article v-for="product in building" :key="product.name" class="min-w-0 rounded-2xl bg-sunken p-6 sm:p-9">
+        <img
+          v-if="product.image"
+          :src="product.image.src"
+          :alt="product.image.alt"
+          width="1600"
+          height="1000"
+          loading="lazy"
+          class="mb-8 aspect-[16/10] w-full max-w-full rounded-xl border border-line bg-surface object-cover object-top"
+        />
         <h3 class="font-display text-5xl font-bold tracking-[-0.035em]">{{ product.name }}</h3>
         <ExternalLink :href="product.url" class="link mt-3 inline-block font-mono text-sm">
           {{ product.url.replace("https://", "") }}

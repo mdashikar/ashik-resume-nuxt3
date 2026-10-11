@@ -32,7 +32,7 @@
           Available now
         </p>
         <p class="mt-2 text-[15px] text-muted">
-          Senior and lead backend roles. {{ profile.relocation }}
+          Senior and lead backend roles. {{ profile.workType }}. {{ profile.relocation }}
         </p>
         <div class="mt-5 border-t border-line pt-5">
           <p class="label">Email</p>

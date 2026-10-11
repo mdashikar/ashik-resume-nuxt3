@@ -17,7 +17,9 @@ export const profile = {
   location: "Sylhet, Bangladesh",
   years: "7+",
   availability: "Available now for senior and lead backend roles.",
-  relocation: "Open to relocation. EU work sponsorship welcome.",
+  relocation: "Open to relocation with visa sponsorship.",
+  workType: "Remote, full-time or contract",
+  languages: "English, Bangla",
   intro:
     "I'm a full-stack engineer with 7+ years of experience, mostly on the backend. At Dorik I led the backend team, ran the company's AWS infrastructure, and built two of its products: Consently, as the sole backend engineer, and Postmonk, as the only engineer. Today I run Feevox, my own product, and co-founded Erestro, where I build the full stack.",
   summary:
@@ -43,6 +45,8 @@ export interface Product {
   role: string;
   features: string[];
   stack: string[];
+  // Optional screenshot in public/images/products/, shown at the top of the card
+  image?: { src: string; alt: string };
 }
 
 export const building: Product[] = [
@@ -225,6 +229,16 @@ export const education = {
   years: "2014 – 2018",
   coursework: "Data Structures & Algorithms, OOP, Computer Architecture, Operating Systems, AI, Networking",
 };
+
+// "Working with me" facts for recruiters
+export const hiring = [
+  { label: "Availability", value: "Available now", live: true },
+  { label: "Looking for", value: "Senior and lead backend roles" },
+  { label: "Work type", value: profile.workType },
+  { label: "Time zone", value: "UTC+6", note: "Sylhet, Bangladesh" },
+  { label: "Relocation", value: "Open to relocating", note: "Requires visa sponsorship" },
+  { label: "Languages", value: profile.languages },
+];
 
 export const navLinks = [
   { label: "Now", href: "/#now" },

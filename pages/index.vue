@@ -5,6 +5,7 @@
     <ShippedWork />
     <SkillsSection />
     <ExperienceList />
+    <WorkingWithMe />
     <Contact />
   </div>
 </template>
