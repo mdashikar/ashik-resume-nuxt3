@@ -3,6 +3,7 @@
     <HomeHero />
     <NowBuilding />
     <ShippedWork />
+    <SkillsSection />
     <ExperienceList />
     <Contact />
   </div>

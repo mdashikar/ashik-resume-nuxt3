@@ -198,18 +198,22 @@ export const experience: Role[] = [
 export const skills = [
   {
     group: "Backend",
-    items: ["Node.js", "Express", "TypeScript", "REST API design", "GraphQL", "Microservices", "BullMQ", "RabbitMQ", "MongoDB", "Redis", "PostgreSQL"],
+    summary: "APIs, data models and background jobs for products with real traffic.",
+    items: ["Node.js", "TypeScript", "Express", "REST API design", "GraphQL", "Microservices", "MongoDB", "PostgreSQL", "Redis", "BullMQ", "RabbitMQ", "Stripe"],
   },
   {
     group: "Cloud & DevOps",
-    items: ["AWS ECS, EC2, Lambda", "Terraform", "Docker", "CI/CD pipelines", "Infrastructure as code"],
+    summary: "AWS infrastructure as code, deployments and keeping services up.",
+    items: ["AWS ECS", "AWS EC2", "AWS Lambda", "Terraform", "Docker", "CI/CD pipelines", "Infrastructure as code"],
   },
   {
     group: "Frontend",
+    summary: "Vue and Nuxt for product frontends, plus React and Next.js from client work.",
     items: ["JavaScript", "TypeScript", "Vue", "Nuxt", "React", "Next.js", "SolidJS", "Vuetify", "Pinia, Vuex, Redux"],
   },
   {
-    group: "Practices",
+    group: "Ways of working",
+    summary: "Leading teams, reviewing code and planning releases.",
     items: ["System design", "Code review", "Team leadership", "Mentoring", "Deployment management", "Agile"],
   },
 ];
@@ -225,6 +229,7 @@ export const education = {
 export const navLinks = [
   { label: "Now", href: "/#now" },
   { label: "Shipped", href: "/#shipped" },
+  { label: "Skills", href: "/#skills" },
   { label: "Experience", href: "/#experience" },
   { label: "Contact", href: "/#contact" },
 ];

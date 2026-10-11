@@ -19,23 +19,9 @@
         </div>
       </li>
     </ol>
-
-    <div class="mt-16">
-      <h3 class="font-display text-2xl font-bold tracking-[-0.02em]">Skills</h3>
-      <dl class="mt-6 grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-10 lg:grid-cols-4">
-        <div v-for="group in skills" :key="group.group">
-          <dt class="label">{{ group.group }}</dt>
-          <dd class="mt-2.5">
-            <ul class="space-y-1">
-              <li v-for="item in group.items" :key="item">{{ item }}</li>
-            </ul>
-          </dd>
-        </div>
-      </dl>
-    </div>
   </PageSection>
 </template>
 
 <script setup lang="ts">
-import { experience, skills } from "~/data/profile";
+import { experience } from "~/data/profile";
 </script>
