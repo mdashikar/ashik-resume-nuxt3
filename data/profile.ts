@@ -17,7 +17,9 @@ export const profile = {
   location: "Sylhet, Bangladesh",
   years: "7+",
   availability: "Available now for senior and lead backend roles.",
-  relocation: "Open to relocation. EU work sponsorship welcome.",
+  relocation: "Open to relocation with visa sponsorship.",
+  workType: "Remote, full-time or contract",
+  languages: "English, Bangla",
   intro:
     "I'm a full-stack engineer with 7+ years of experience, mostly on the backend. At Dorik I led the backend team, ran the company's AWS infrastructure, and built two of its products: Consently, as the sole backend engineer, and Postmonk, as the only engineer. Today I run Feevox, my own product, and co-founded Erestro, where I build the full stack.",
   summary:
@@ -43,6 +45,8 @@ export interface Product {
   role: string;
   features: string[];
   stack: string[];
+  // Optional screenshot in public/images/products/, shown at the top of the card
+  image?: { src: string; alt: string };
 }
 
 export const building: Product[] = [
@@ -198,19 +202,23 @@ export const experience: Role[] = [
 export const skills = [
   {
     group: "Backend",
-    items: ["Node.js", "Express", "TypeScript", "REST API design", "GraphQL", "Microservices", "BullMQ", "RabbitMQ", "MongoDB", "Redis", "PostgreSQL"],
+    summary: "APIs, data models and background jobs for products with real traffic.",
+    items: ["Node.js", "TypeScript", "Express", "REST API design", "GraphQL", "Microservices", "MongoDB", "PostgreSQL", "Redis", "BullMQ", "RabbitMQ", "Stripe"],
   },
   {
     group: "Cloud & DevOps",
-    items: ["AWS ECS, EC2, Lambda", "Terraform", "Docker", "CI/CD pipelines", "Infrastructure as code"],
+    summary: "AWS infrastructure as code, deployments and keeping services up.",
+    items: ["AWS ECS", "AWS EC2", "AWS Lambda", "Terraform", "Docker", "CI/CD pipelines", "Infrastructure as code"],
   },
   {
     group: "Frontend",
+    summary: "Vue and Nuxt for product frontends, plus React and Next.js from client work.",
     items: ["JavaScript", "TypeScript", "Vue", "Nuxt", "React", "Next.js", "SolidJS", "Vuetify", "Pinia, Vuex, Redux"],
   },
   {
-    group: "Practices",
-    items: ["System design", "Code review", "Team leadership", "Mentoring", "Deployment management", "Agile"],
+    group: "Ways of working",
+    summary: "Leading teams, reviewing code and planning releases.",
+    items: ["System design", "Code review", "Team leadership", "Mentoring", "Deployment management", "AI-assisted development", "Agile"],
   },
 ];
 
@@ -222,9 +230,32 @@ export const education = {
   coursework: "Data Structures & Algorithms, OOP, Computer Architecture, Operating Systems, AI, Networking",
 };
 
+// "How I work with AI"
+export const aiWorkflow = {
+  intro:
+    "I build features with Claude Code and Codex every day. The agent writes a lot of the code; I stay responsible for what ships.",
+  tools: ["Claude Code", "Codex"],
+  steps: [
+    { title: "Plan", text: "A written spec and plan before any code is generated." },
+    { title: "Test", text: "Automated tests that have to pass, including cross-tenant and integration tests." },
+    { title: "Review", text: "Code review before merge, including Codex reviewing pull requests." },
+  ],
+};
+
+// "Working with me" facts for recruiters
+export const hiring = [
+  { label: "Availability", value: "Available now", live: true },
+  { label: "Looking for", value: "Senior and lead backend roles" },
+  { label: "Work type", value: profile.workType },
+  { label: "Time zone", value: "UTC+6", note: "Sylhet, Bangladesh" },
+  { label: "Relocation", value: "Open to relocating", note: "Requires visa sponsorship" },
+  { label: "Languages", value: profile.languages },
+];
+
 export const navLinks = [
   { label: "Now", href: "/#now" },
   { label: "Shipped", href: "/#shipped" },
+  { label: "Skills", href: "/#skills" },
   { label: "Experience", href: "/#experience" },
   { label: "Contact", href: "/#contact" },
 ];

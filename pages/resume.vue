@@ -95,6 +95,10 @@
             <dt class="font-medium">{{ group.group }}</dt>
             <dd class="text-muted">{{ group.items.join(", ") }}</dd>
           </div>
+          <div class="grid gap-1 sm:grid-cols-[9rem_minmax(0,1fr)]">
+            <dt class="font-medium">Languages</dt>
+            <dd class="text-muted">{{ profile.languages }}</dd>
+          </div>
         </dl>
       </section>
 

@@ -59,7 +59,7 @@ npx wrangler login
 npm run deploy:cf
 ```
 
-This deploys to the `ashik-resume-nuxt3` Pages project (created on first deploy).
+This deploys to the `ashik-dev-nuxt3` Pages project (created on first deploy).
 
 ### Other hosts
 

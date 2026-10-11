@@ -6,7 +6,8 @@
         Hiring for a senior or lead backend role?
       </h2>
       <p class="mt-5 max-w-[52ch] text-lg text-on-band/75">
-        I'm available now. {{ profile.relocation }} I also like hearing from people using Feevox or Erestro.
+        I'm available now for remote, full-time or contract work, and open to relocation with visa sponsorship. I also
+        like hearing from people using Feevox or Erestro.
       </p>
 
       <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">

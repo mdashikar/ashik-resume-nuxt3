@@ -3,7 +3,10 @@
     <HomeHero />
     <NowBuilding />
     <ShippedWork />
+    <SkillsSection />
+    <AiWorkflow />
     <ExperienceList />
+    <WorkingWithMe />
     <Contact />
   </div>
 </template>

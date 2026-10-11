@@ -46,6 +46,7 @@ export const usePageSeo = (opts: { title: string; description: string; path: str
           description: profile.summary,
           email: `mailto:${profile.email}`,
           address: { "@type": "PostalAddress", addressLocality: "Sylhet", addressCountry: "BD" },
+          knowsLanguage: ["en", "bn"],
           alumniOf: { "@type": "CollegeOrUniversity", name: "Leading University" },
           sameAs: profile.links.map((link) => link.href),
           knowsAbout: ["Node.js", "TypeScript", "AWS", "Terraform", "MongoDB", "Redis", "BullMQ", "GraphQL", "Vue.js", "Nuxt"],
