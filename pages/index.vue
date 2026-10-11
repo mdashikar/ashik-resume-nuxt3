@@ -4,6 +4,7 @@
     <NowBuilding />
     <ShippedWork />
     <SkillsSection />
+    <AiWorkflow />
     <ExperienceList />
     <WorkingWithMe />
     <Contact />

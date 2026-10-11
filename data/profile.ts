@@ -218,7 +218,7 @@ export const skills = [
   {
     group: "Ways of working",
     summary: "Leading teams, reviewing code and planning releases.",
-    items: ["System design", "Code review", "Team leadership", "Mentoring", "Deployment management", "Agile"],
+    items: ["System design", "Code review", "Team leadership", "Mentoring", "Deployment management", "AI-assisted development", "Agile"],
   },
 ];
 
@@ -228,6 +228,18 @@ export const education = {
   location: "Sylhet, Bangladesh",
   years: "2014 – 2018",
   coursework: "Data Structures & Algorithms, OOP, Computer Architecture, Operating Systems, AI, Networking",
+};
+
+// "How I work with AI"
+export const aiWorkflow = {
+  intro:
+    "I build features with Claude Code and Codex every day. The agent writes a lot of the code; I stay responsible for what ships.",
+  tools: ["Claude Code", "Codex"],
+  steps: [
+    { title: "Plan", text: "A written spec and plan before any code is generated." },
+    { title: "Test", text: "Automated tests that have to pass, including cross-tenant and integration tests." },
+    { title: "Review", text: "Code review before merge, including Codex reviewing pull requests." },
+  ],
 };
 
 // "Working with me" facts for recruiters
